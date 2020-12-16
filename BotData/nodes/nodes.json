@@ -229,6 +229,8 @@
         "🎮"
       ],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "💔",
@@ -255,8 +257,8 @@
           "id": "c4a5112f-6627-4137-a111-43576ed26169"
         }
       ],
-      "x": 653,
-      "y": 392,
+      "x": 615,
+      "y": 213,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
@@ -280,6 +282,8 @@
       "guid": "9d486075-d507-4e3f-ab89-2f428cd5da1c",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -535,187 +539,12 @@
         {
           "label": "responses",
           "connections": [
-            "f5131f60-08c1-44e0-955d-81b784d95782"
+            "a328d6a0-7fc8-48ef-88c2-9d283880cc44"
           ]
         }
       ],
-      "x": 244,
-      "y": 736
-    },
-    {
-      "type": "response",
-      "name": "status",
-      "guid": "f5131f60-08c1-44e0-955d-81b784d95782",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "d98da25c-63f0-4e35-bb46-fd700ff21c28"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
-        }
-      ],
-      "x": 423,
-      "y": 732,
-      "rtype": "Bot Action",
-      "rsubtype": "More Status",
-      "formdata": [
-        "WATCHING",
-        "all of you children! I'm watching you, Wazowski.. Always watching.."
-      ],
-      "formnames": [
-        "statusOption",
-        "statusText"
-      ]
-    },
-    {
-      "type": "command",
-      "name": "report",
-      "guid": "324d5718-6cc9-4cb7-93e2-daebc333ef1e",
-      "outputs": [
-        {
-          "label": "responses",
-          "connections": []
-        }
-      ],
-      "x": 681,
-      "y": 618
-    },
-    {
-      "type": "response",
-      "name": "report-store",
-      "guid": "c81984ca-9f9c-4756-bc32-8000035c7567",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "reported-message",
-      "saveToVariableType": "global",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "48e8ff85-bcb9-4103-bc5d-edd0e2506012"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "c95849d5-41d0-438a-8bbd-5991e69fcafb"
-        }
-      ],
-      "x": 1092,
-      "y": 618,
-      "rtype": "Variable",
-      "rsubtype": "Store Value in Variable",
-      "formdata": [
-        "reported-message",
-        "Text",
-        "global",
-        "0"
-      ],
-      "formnames": [
-        "varname",
-        "vartype",
-        "saveVarType",
-        "param"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "report-log",
-      "guid": "48e8ff85-bcb9-4103-bc5d-edd0e2506012",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "c81984ca-9f9c-4756-bc32-8000035c7567"
-        }
-      ],
-      "x": 1282,
-      "y": 624,
-      "rtype": "Message",
-      "rsubtype": "Send Embed",
-      "formdata": [
-        "reports-log",
-        "99D6FF",
-        "Bad, bad boy!",
-        "",
-        "Alex Frantz",
-        "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
-        "https://alex.plaguecraft.xyz",
-        "User <@${tempVars.report.id}> has been reported! \nReason:\n${globalVars.reported}",
-        "",
-        "",
-        "",
-        "false",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelname",
-        "color",
-        "title",
-        "url",
-        "authorname",
-        "authorimageurl",
-        "authorlink",
-        "description",
-        "thumbnail",
-        "image",
-        "footer",
-        "timestamp",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "get-user",
-      "guid": "c95849d5-41d0-438a-8bbd-5991e69fcafb",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "c81984ca-9f9c-4756-bc32-8000035c7567"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "324d5718-6cc9-4cb7-93e2-daebc333ef1e"
-        }
-      ],
-      "x": 859,
-      "y": 603,
-      "rtype": "Variable",
-      "rsubtype": "Get Mentioned User",
-      "formdata": [
-        "report-user",
-        "User",
-        "temp"
-      ],
-      "formnames": [
-        "varname",
-        "vartype",
-        "saveVarType"
-      ]
+      "x": 854,
+      "y": 927
     },
     {
       "type": "response",
@@ -723,6 +552,8 @@
       "guid": "d98da25c-63f0-4e35-bb46-fd700ff21c28",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -732,11 +563,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "f5131f60-08c1-44e0-955d-81b784d95782"
+          "id": "14be2ae2-3118-4eb6-9fca-ac0fbecc794d"
         }
       ],
-      "x": 603,
-      "y": 721,
+      "x": 1499,
+      "y": 713,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -810,12 +641,12 @@
         {
           "label": "responses",
           "connections": [
-            "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c"
+            "1c785c53-137d-4387-af22-2f4e13428943"
           ]
         }
       ],
-      "x": 602,
-      "y": 1031
+      "x": 40,
+      "y": 758
     },
     {
       "type": "response",
@@ -826,17 +657,19 @@
       "outputs": [
         {
           "label": "next response",
-          "connections": []
+          "connections": [
+            "4cde0fb7-d42c-4c57-abd5-003531171495"
+          ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "44dbbbe7-1584-4296-833d-c9846441b539"
+          "id": "0fa15aca-f8c7-4208-8ebb-9840d229dd02"
         }
       ],
-      "x": 851,
-      "y": 1006,
+      "x": 647,
+      "y": 721,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -937,13 +770,465 @@
           "id": "f719daeb-02bf-4d21-a9dc-22559190ed41"
         }
       ],
-      "x": 398,
+      "x": 399,
       "y": 1278,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "the best gay couple baha",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "goodbot",
+      "guid": "eb636927-b20d-40b7-85c7-de35f1ccb875",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "4c1ad58c-f86f-45af-8475-c79177c5d846"
+          ]
+        }
+      ],
+      "x": 607,
+      "y": 442
+    },
+    {
+      "type": "response",
+      "name": "ty",
+      "guid": "4c1ad58c-f86f-45af-8475-c79177c5d846",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "eb636927-b20d-40b7-85c7-de35f1ccb875"
+        }
+      ],
+      "x": 607,
+      "y": 555,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandAuthor.user.dmChannel}",
+        "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/?ref=bot-gen",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "warn",
+      "guid": "0acee19d-370f-46cb-b315-1b591a3a228b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "77cf3439-4db9-4920-9955-95e9b7ae70cc"
+          ]
+        }
+      ],
+      "x": 99,
+      "y": 1445,
+      "perms": [
+        "madi & awex"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "warn-resp",
+      "guid": "bf42db2e-7a08-4d65-8c1f-a89ce4c11d0e",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "77cf3439-4db9-4920-9955-95e9b7ae70cc"
+        }
+      ],
+      "x": 619,
+      "y": 1428,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${tempVars.mentioned.user.dmChannel}",
+        "Yo! You've been warned >:)\nBe good! We're all friends, but you pushed some buttons and someone baby raged. **Be careful!**",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get-mtnd-warn",
+      "guid": "77cf3439-4db9-4920-9955-95e9b7ae70cc",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "bf42db2e-7a08-4d65-8c1f-a89ce4c11d0e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0acee19d-370f-46cb-b315-1b591a3a228b"
+        }
+      ],
+      "x": 355,
+      "y": 1431,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "mentioned-user",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "demi-kat",
+      "guid": "948c6290-11ad-4dbb-8410-488a7145c681",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "bd5016ff-6f2b-4fb1-9094-9bcbdebf54f2"
+          ]
+        }
+      ],
+      "x": 888,
+      "y": 1355
+    },
+    {
+      "type": "response",
+      "name": "dk-resp",
+      "guid": "bd5016ff-6f2b-4fb1-9094-9bcbdebf54f2",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "948c6290-11ad-4dbb-8410-488a7145c681"
+        }
+      ],
+      "x": 1099,
+      "y": 1368,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "the kinkiest couple.. demi and kat",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "status",
+      "guid": "295ecb55-6345-4a1d-9132-a98747fb49bd",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "14be2ae2-3118-4eb6-9fca-ac0fbecc794d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "22608704-b31d-431a-840b-032033d0e0a8"
+        }
+      ],
+      "x": 1127,
+      "y": 713,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Status",
+      "formdata": [
+        "dnd"
+      ],
+      "formnames": [
+        "presencestatus"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "activity",
+      "guid": "14be2ae2-3118-4eb6-9fca-ac0fbecc794d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d98da25c-63f0-4e35-bb46-fd700ff21c28"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "295ecb55-6345-4a1d-9132-a98747fb49bd"
+        }
+      ],
+      "x": 1296,
+      "y": 713,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "dhmu, heart hurts :((",
+        "PLAYING",
+        "with my heart."
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "really hurts",
+      "guid": "22608704-b31d-431a-840b-032033d0e0a8",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "295ecb55-6345-4a1d-9132-a98747fb49bd"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "4cde0fb7-d42c-4c57-abd5-003531171495"
+        }
+      ],
+      "x": 973,
+      "y": 712,
+      "rtype": "Message",
+      "rsubtype": "Send Message"
+    },
+    {
+      "type": "response",
+      "name": "wait",
+      "guid": "4cde0fb7-d42c-4c57-abd5-003531171495",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "22608704-b31d-431a-840b-032033d0e0a8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c"
+        }
+      ],
+      "x": 813,
+      "y": 715,
+      "rtype": "Bot Action",
+      "rsubtype": "Edited Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "dmingu",
+      "guid": "1c785c53-137d-4387-af22-2f4e13428943",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "0fa15aca-f8c7-4208-8ebb-9840d229dd02"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "44dbbbe7-1584-4296-833d-c9846441b539"
+        }
+      ],
+      "x": 226,
+      "y": 751,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "i'm sending you a dm, <@${dbsVars.CommandAuthor.id}>",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "wait_1",
+      "guid": "0fa15aca-f8c7-4208-8ebb-9840d229dd02",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1c785c53-137d-4387-af22-2f4e13428943"
+        }
+      ],
+      "x": 440,
+      "y": 759,
+      "rtype": "Bot Action",
+      "rsubtype": "Edited Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "new-status",
+      "guid": "a328d6a0-7fc8-48ef-88c2-9d283880cc44",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "529c790b-df23-4521-bd93-6c11bfaf717f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
+        }
+      ],
+      "x": 1038,
+      "y": 952,
+      "rtype": "Bot Action",
+      "rsubtype": "More Status",
+      "formdata": [
+        "WATCHING",
+        "you >:("
+      ],
+      "formnames": [
+        "statusOption",
+        "statusText"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "dones",
+      "guid": "529c790b-df23-4521-bd93-6c11bfaf717f",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a328d6a0-7fc8-48ef-88c2-9d283880cc44"
+        }
+      ],
+      "x": 1265,
+      "y": 974,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "done ;/",
         "",
         "temp"
       ],

@@ -175,26 +175,22 @@
       "name": "set-status",
       "actions": [
         {
-          "name": "status",
+          "name": "new-status",
           "category": "Bot Action",
           "type": "More Status",
           "statusoption": "WATCHING",
-          "statustext": "all of you children! I'm watching you, Wazowski.. Always watching.."
+          "statustext": "you >:("
         },
         {
-          "name": "finish-status",
+          "name": "dones",
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Done!",
+          "messagetext": "done ;/",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
       ]
-    },
-    {
-      "name": "report",
-      "actions": []
     },
     {
       "name": "madi-awex",
@@ -214,11 +210,55 @@
       "name": "badbot",
       "actions": [
         {
+          "name": "dmingu",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "i'm sending you a dm, <@${dbsVars.CommandAuthor.id}>",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "wait_1",
+          "category": "Bot Action",
+          "type": "Edited Wait",
+          "seconds": "2"
+        },
+        {
           "name": "listen-here",
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
           "messagetext": "listen here you little shit..",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "wait",
+          "category": "Bot Action",
+          "type": "Edited Wait",
+          "seconds": "2"
+        },
+        {
+          "name": "status",
+          "category": "Bot Action",
+          "type": "Set Bot Status",
+          "presencestatus": "dnd"
+        },
+        {
+          "name": "activity",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "dhmu, heart hurts :((",
+          "activitytype": "PLAYING",
+          "streamurl": "with my heart."
+        },
+        {
+          "name": "finish-status",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Done!",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -247,6 +287,59 @@
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
           "messagetext": "the best gay couple baha",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "goodbot",
+      "actions": [
+        {
+          "name": "ty",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
+          "messagetext": "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/?ref=bot-gen",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "warn",
+      "perms": [
+        "madi & awex"
+      ],
+      "actions": [
+        {
+          "name": "get-mtnd-warn",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "varname": "mentioned-user",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "warn-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${tempVars.mentioned.user.dmChannel}",
+          "messagetext": "Yo! You've been warned >:)\nBe good! We're all friends, but you pushed some buttons and someone baby raged. **Be careful!**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "demi-kat",
+      "actions": [
+        {
+          "name": "dk-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "the kinkiest couple.. demi and kat",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }

@@ -64,6 +64,15 @@
           "messagetext": "I've been updated and re-initialized!\n*Developers: If I'm slower then usual, hit up awex. He probably did something wrong.*",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        },
+        {
+          "name": "hellogif",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "general",
+          "messagetext": "https://tenor.com/FHCd.gif",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         }
       ],
       "var": {}

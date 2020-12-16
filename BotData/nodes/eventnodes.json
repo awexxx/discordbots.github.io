@@ -97,12 +97,12 @@
       "guid": "a0687698-00fa-4bee-a38e-e533021e1509",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
-          "connections": []
+          "connections": [
+            "21452cc4-7ffa-4e98-b655-38bcb923df4d"
+          ]
         }
       ],
       "inputs": [
@@ -134,8 +134,6 @@
       "guid": "2cd12396-4a3f-4fcc-85fd-58215c039732",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -193,8 +191,6 @@
       "guid": "f19146d3-e765-4a5f-ae1a-72d1784cba89",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -214,6 +210,43 @@
       "formdata": [
         "welcome",
         "Welcome to the server, <@${tempVars.newuser.id}>!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "hellogif",
+      "guid": "21452cc4-7ffa-4e98-b655-38bcb923df4d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "a0687698-00fa-4bee-a38e-e533021e1509"
+        }
+      ],
+      "x": 515,
+      "y": 635,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "general",
+        "https://tenor.com/FHCd.gif",
         "",
         "temp"
       ],
