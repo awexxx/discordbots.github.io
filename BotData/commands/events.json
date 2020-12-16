@@ -1,0 +1,72 @@
+{
+  "command": [
+    {
+      "name": "User Joins Server",
+      "perms": [],
+      "actions": [
+        {
+          "name": "join",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "joins",
+          "messagetext": "Welcome to the server, <@${tempVars.newuser.id}>!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
+      "var": {
+        "user": "newuser"
+      }
+    },
+    {
+      "name": "Any Message",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "msguser"
+      }
+    },
+    {
+      "name": "User Kicked",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "kickuser"
+      }
+    },
+    {
+      "name": "User Banned",
+      "perms": [],
+      "actions": [
+        {
+          "name": "banned",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "bans",
+          "color": "99D6FF",
+          "title": "Banned!",
+          "url": "https://alex.plaguecraft.xyz/home",
+          "authorname": "Alex Frantz",
+          "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
+          "authorlink": "https://alex.plaguecraft.xyz/home",
+          "description": "User ${tempVars.banuser.displayName} was banned from this server!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Wanna hear a joke? My life.",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ],
+      "var": {
+        "user": "banuser"
+      }
+    },
+    {
+      "name": "Bot Initialization",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    }
+  ]
+}

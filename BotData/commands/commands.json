@@ -1,0 +1,178 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "?help",
+              "value": "Shows this menu",
+              "inline": "true"
+            },
+            {
+              "name": "?ping",
+              "value": "Pings the bot to see if it's online.",
+              "inline": "true"
+            },
+            {
+              "name": "?roles",
+              "value": "Provides Reaction Roles",
+              "inline": "true"
+            },
+            {
+              "name": "?setstatus",
+              "value": "Sets bot status",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "99D6FF",
+          "title": "Help Menu",
+          "url": "https://alex.plaguecraft.xyz/home",
+          "authorname": "Alex Frantz",
+          "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
+          "authorlink": "https://alex.plaguecraft.xyz/home",
+          "description": "YOYO I HAVE BEEN SUMMONED TO REPLY TO YOU",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ping",
+      "perms": [],
+      "actions": [
+        {
+          "name": "show info",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.DefaultChannel.id}",
+          "messagetext": "Pong! I'm online and ready :D",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "roles",
+      "actions": [
+        {
+          "name": "reaction menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "A6C4FF",
+          "title": "TheBoys Reaction Bot",
+          "url": "https://alex.plaguecraft.xyz/home",
+          "authorname": "Alex Frantz",
+          "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
+          "authorlink": "",
+          "description": "",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "reactionmenu",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "reaction-listener",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "🖤": [
+              {
+                "name": "add-couples",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reaction.id}",
+                "rolename": "Couples"
+              },
+              {
+                "name": "confirm-couples",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Thank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Couples** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "💔": [
+              {
+                "name": "add-lonely",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reaction.id}",
+                "rolename": "Lonely"
+              },
+              {
+                "name": "confirm-lonely",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Aww.. sorry for your sadness, <@${dbsVars.CommandAuthor.id}>!\nYou now have the **Lonely & Broken** role.",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "🎮": [
+              {
+                "name": "add-gamers",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reaction.id}",
+                "rolename": "Gamers"
+              },
+              {
+                "name": "confirm-gamers",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Woo! Gaming is fun! You just added **Gamers** to your profile, <@${dbsVars.CommandAuthor.id}>!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "message": "${tempVars.reactionmenu.id}",
+          "duration": "90",
+          "reactionemoji": "reaction-emj",
+          "reactionuser": "reaction-user",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "setstatus",
+      "perms": [],
+      "actions": [
+        {
+          "name": "test",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "music & games",
+          "activitytype": "PLAYING",
+          "streamurl": ""
+        },
+        {
+          "name": "done",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Done! Look at my status :D",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}
