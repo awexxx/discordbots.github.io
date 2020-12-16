@@ -52,6 +52,8 @@
           "inline": "true"
         }
       ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -64,7 +66,7 @@
           "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
         }
       ],
-      "x": 345,
+      "x": 347,
       "y": 182,
       "rtype": "Message",
       "rsubtype": "Send Embed",
@@ -229,8 +231,6 @@
         "🎮"
       ],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "💔",
@@ -282,8 +282,6 @@
       "guid": "9d486075-d507-4e3f-ab89-2f428cd5da1c",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -572,7 +570,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "Done!",
+        "guys <@${dbsVars.CommandAuthor.id}> hurt my feelings >:(",
         "",
         "temp"
       ],
@@ -654,6 +652,8 @@
       "guid": "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -756,8 +756,6 @@
       "guid": "d8ccefa6-5105-4d94-909d-024cb79ec0e7",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -898,6 +896,8 @@
       "guid": "77cf3439-4db9-4920-9955-95e9b7ae70cc",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -948,8 +948,6 @@
       "guid": "bd5016ff-6f2b-4fb1-9094-9bcbdebf54f2",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1049,7 +1047,10 @@
       "type": "response",
       "name": "really hurts",
       "guid": "22608704-b31d-431a-840b-032033d0e0a8",
+      "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1067,7 +1068,19 @@
       "x": 973,
       "y": 712,
       "rtype": "Message",
-      "rsubtype": "Send Message"
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandAuthor.user.dmChannel}",
+        "that really hurt my feelings, and i wont hecking stand for this! i'm gonna tell on you and then cry.. im posting dhmu on my snap story :sob:",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
     },
     {
       "type": "response",
@@ -1208,8 +1221,6 @@
       "guid": "529c790b-df23-4521-bd93-6c11bfaf717f",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1229,6 +1240,162 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "done ;/",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "lilly",
+      "guid": "74206928-541d-48a5-82ec-346402a24bf5",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "66c5ddb1-01f7-43f7-b5cd-ade3ce3f2704"
+          ]
+        }
+      ],
+      "x": 751,
+      "y": 1129
+    },
+    {
+      "type": "response",
+      "name": "laugh",
+      "guid": "66c5ddb1-01f7-43f7-b5cd-ade3ce3f2704",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "74206928-541d-48a5-82ec-346402a24bf5"
+        }
+      ],
+      "x": 993,
+      "y": 1132,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "BAHAHHAHHAHAHHAAHHAAHHAHHAHAAHAHAHAHAAHAHHAHAHAHAHAHAHAHAH",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "sophie",
+      "guid": "cb8bb83e-3fce-4fec-bf4c-6cc459182e6b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "14bd62bd-39ab-4db7-9103-72aec4a2ee75"
+          ]
+        }
+      ],
+      "x": 512,
+      "y": 1003
+    },
+    {
+      "type": "response",
+      "name": "sophieresp",
+      "guid": "14bd62bd-39ab-4db7-9103-72aec4a2ee75",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "cb8bb83e-3fce-4fec-bf4c-6cc459182e6b"
+        }
+      ],
+      "x": 675,
+      "y": 894,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "the calmest one out of all of us..",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "madi",
+      "guid": "7543a9ca-c66c-4a19-af70-52398c5b890b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "1c84d264-92c3-439e-87fa-add9dd964711"
+          ]
+        }
+      ],
+      "x": 608,
+      "y": 1610
+    },
+    {
+      "type": "response",
+      "name": "madiresp",
+      "guid": "1c84d264-92c3-439e-87fa-add9dd964711",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7543a9ca-c66c-4a19-af70-52398c5b890b"
+        }
+      ],
+      "x": 887,
+      "y": 1602,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "ofc the most perfect girl in the world bruh like how tf is she so fucking perfect i-",
         "",
         "temp"
       ],

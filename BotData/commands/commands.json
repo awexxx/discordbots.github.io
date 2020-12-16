@@ -240,6 +240,15 @@
           "seconds": "2"
         },
         {
+          "name": "really hurts",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
+          "messagetext": "that really hurt my feelings, and i wont hecking stand for this! i'm gonna tell on you and then cry.. im posting dhmu on my snap story :sob:",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
           "name": "status",
           "category": "Bot Action",
           "type": "Set Bot Status",
@@ -258,7 +267,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Done!",
+          "messagetext": "guys <@${dbsVars.CommandAuthor.id}> hurt my feelings >:(",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -340,6 +349,48 @@
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
           "messagetext": "the kinkiest couple.. demi and kat",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "lilly",
+      "actions": [
+        {
+          "name": "laugh",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "BAHAHHAHHAHAHHAAHHAAHHAHHAHAAHAHAHAHAAHAHHAHAHAHAHAHAHAHAH",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "sophie",
+      "actions": [
+        {
+          "name": "sophieresp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "the calmest one out of all of us..",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "madi",
+      "actions": [
+        {
+          "name": "madiresp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "ofc the most perfect girl in the world bruh like how tf is she so fucking perfect i-",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
