@@ -15,31 +15,31 @@
             },
             {
               "name": "?ping",
-              "value": "Pings the bot to see if it's online.",
+              "value": "Shows some info about ping (ticks per second)",
               "inline": "true"
             },
             {
               "name": "?roles",
-              "value": "Provides Reaction Roles",
+              "value": "Displays reaction role menu ",
               "inline": "true"
             },
             {
-              "name": "?setstatus",
-              "value": "Sets bot status",
+              "name": "",
+              "value": "",
               "inline": "true"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
           "color": "99D6FF",
           "title": "Help Menu",
-          "url": "https://alex.plaguecraft.xyz/home",
+          "url": "",
           "authorname": "Alex Frantz",
           "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
           "authorlink": "https://alex.plaguecraft.xyz/home",
-          "description": "YOYO I HAVE BEEN SUMMONED TO REPLY TO YOU",
+          "description": "YOYO WHAT's UP IM HERE TO HELP YOU LOLOLOLOOLOLOL",
           "thumbnail": "",
           "image": "",
-          "footer": "",
+          "footer": "Why are we still here.. just to suffer..",
           "timestamp": "false",
           "savetovariable": "",
           "savetovariabletype": "temp"
@@ -48,16 +48,12 @@
     },
     {
       "name": "ping",
-      "perms": [],
       "actions": [
         {
-          "name": "show info",
+          "name": "ping-resp",
           "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.DefaultChannel.id}",
-          "messagetext": "Pong! I'm online and ready :D",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
+          "type": "Ping Message",
+          "pingmessage": "Woah there! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!"
         }
       ]
     },
@@ -65,50 +61,32 @@
       "name": "roles",
       "actions": [
         {
-          "name": "reaction menu",
+          "name": "reaction-embed",
           "category": "Message",
           "type": "Send Embed",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "color": "A6C4FF",
-          "title": "TheBoys Reaction Bot",
+          "color": "99D6FF",
+          "title": "Reaction Roles",
           "url": "https://alex.plaguecraft.xyz/home",
           "authorname": "Alex Frantz",
           "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
-          "authorlink": "",
-          "description": "",
+          "authorlink": "https://alex.plaguecraft.xyz/home",
+          "description": "React to one of these emojis to get a role!\nBroken Heart = Lonely & Broken\nBlack Heart = Couple\nController = Gamers",
           "thumbnail": "",
           "image": "",
-          "footer": "",
+          "footer": "pain.",
           "timestamp": "false",
           "savetovariable": "reactionmenu",
           "savetovariabletype": "temp"
         },
         {
-          "name": "reaction-listener",
+          "name": "listener",
           "category": "Reaction",
           "type": "Add Reaction Listener",
           "reactionActions": {
-            "🖤": [
-              {
-                "name": "add-couples",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.reaction.id}",
-                "rolename": "Couples"
-              },
-              {
-                "name": "confirm-couples",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Thank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Couples** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
             "💔": [
               {
-                "name": "add-lonely",
+                "name": "give-lonely",
                 "category": "User Action",
                 "type": "Add Role to User",
                 "user": "${tempVars.reaction.id}",
@@ -119,14 +97,32 @@
                 "category": "Message",
                 "type": "Send Message",
                 "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Aww.. sorry for your sadness, <@${dbsVars.CommandAuthor.id}>!\nYou now have the **Lonely & Broken** role.",
+                "messagetext": "Con.. Congrats? err.. congrats on the role, <@${dbsVars.CommandAuthor.id}>..",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "🖤": [
+              {
+                "name": "give-couple",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reaction.id}",
+                "rolename": "Couples"
+              },
+              {
+                "name": "confirm-couple",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "YOOOO YOU MADE IT <@${dbsVars.CommandAuthor.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
                 "savetovariable": "",
                 "savetovariabletype": "temp"
               }
             ],
             "🎮": [
               {
-                "name": "add-gamers",
+                "name": "give-gamers",
                 "category": "User Action",
                 "type": "Add Role to User",
                 "user": "${tempVars.reaction.id}",
@@ -137,7 +133,7 @@
                 "category": "Message",
                 "type": "Send Message",
                 "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Woo! Gaming is fun! You just added **Gamers** to your profile, <@${dbsVars.CommandAuthor.id}>!",
+                "messagetext": "AYO LET'S GAME BOYS\nThank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Gamers** role!",
                 "savetovariable": "",
                 "savetovariabletype": "temp"
               }
@@ -145,30 +141,60 @@
           },
           "message": "${tempVars.reactionmenu.id}",
           "duration": "90",
-          "reactionemoji": "reaction-emj",
+          "reactionemoji": "reaction-emoji",
           "reactionuser": "reaction-user",
           "react": "BOOL_TRUE@@"
         }
       ]
     },
     {
-      "name": "setstatus",
+      "name": "dev-link",
       "perms": [],
       "actions": [
         {
-          "name": "test",
+          "name": "invite-response",
+          "category": "Message",
+          "type": "Inv Link",
+          "clientid": "788688819159171082",
+          "permint": "8",
+          "msgtext": "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\n*Developers: $$link$$*"
+        }
+      ]
+    },
+    {
+      "name": "set-status",
+      "actions": [
+        {
+          "name": "status",
           "category": "Bot Action",
-          "type": "Set Bot Activity",
-          "activityname": "music & games",
-          "activitytype": "PLAYING",
-          "streamurl": ""
+          "type": "More Status",
+          "statusoption": "WATCHING",
+          "statustext": "all of you children! Member Count: $$members$$"
         },
         {
-          "name": "done",
+          "name": "finish-status",
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Done! Look at my status :D",
+          "messagetext": "Done!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "report",
+      "actions": []
+    },
+    {
+      "name": "madi-awex",
+      "actions": [
+        {
+          "name": "best-couple",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Of course, the BEST couple you could ever meet.",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }

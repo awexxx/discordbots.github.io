@@ -16,22 +16,6 @@
       "y": 188
     },
     {
-      "type": "command",
-      "name": "ping",
-      "guid": "2224944a-561a-4fa1-824b-2f31ea37c836",
-      "outputs": [
-        {
-          "label": "responses",
-          "connections": [
-            "5053a44d-4a5e-460a-974d-da0cc07aac7c"
-          ]
-        }
-      ],
-      "x": 149,
-      "y": 325,
-      "perms": []
-    },
-    {
       "type": "response",
       "name": "help menu",
       "guid": "37eda463-a170-44f9-af54-61378ffc9294",
@@ -44,22 +28,20 @@
         },
         {
           "name": "?ping",
-          "value": "Pings the bot to see if it's online.",
+          "value": "Shows some info about ping (ticks per second)",
           "inline": "true"
         },
         {
           "name": "?roles",
-          "value": "Provides Reaction Roles",
+          "value": "Displays reaction role menu ",
           "inline": "true"
         },
         {
-          "name": "?setstatus",
-          "value": "Sets bot status",
+          "name": "",
+          "value": "",
           "inline": "true"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -72,7 +54,7 @@
           "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
         }
       ],
-      "x": 346,
+      "x": 345,
       "y": 182,
       "rtype": "Message",
       "rsubtype": "Send Embed",
@@ -80,14 +62,14 @@
         "${dbsVars.CommandChannel.id}",
         "99D6FF",
         "Help Menu",
-        "https://alex.plaguecraft.xyz/home",
+        "",
         "Alex Frantz",
         "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
         "https://alex.plaguecraft.xyz/home",
-        "YOYO I HAVE BEEN SUMMONED TO REPLY TO YOU",
+        "YOYO WHAT's UP IM HERE TO HELP YOU LOLOLOLOOLOLOL",
         "",
         "",
-        "",
+        "Why are we still here.. just to suffer..",
         "false",
         "",
         "temp"
@@ -111,8 +93,8 @@
     },
     {
       "type": "response",
-      "name": "show info",
-      "guid": "5053a44d-4a5e-460a-974d-da0cc07aac7c",
+      "name": "ping-resp",
+      "guid": "165f3c6f-190e-4814-82b3-cdfdc967f96c",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
@@ -124,45 +106,54 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
+          "id": "2283300e-35bd-4bc0-b940-c360e5d271de"
         }
       ],
-      "x": 360,
-      "y": 324,
+      "x": 401,
+      "y": 489,
       "rtype": "Message",
-      "rsubtype": "Send Message",
+      "rsubtype": "Ping Message",
       "formdata": [
-        "${dbsVars.DefaultChannel.id}",
-        "Pong! I'm online and ready :D",
-        "",
-        "temp"
+        "Woah there! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!"
       ],
       "formnames": [
-        "channelName",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
+        "pingMessage"
       ]
     },
     {
       "type": "command",
-      "name": "roles",
-      "guid": "b59a0035-6048-40c9-840c-3ac11aa315fb",
+      "name": "ping",
+      "guid": "2283300e-35bd-4bc0-b940-c360e5d271de",
       "outputs": [
         {
           "label": "responses",
           "connections": [
-            "0ac07d4e-8994-49ac-825c-832e3146dbd9"
+            "165f3c6f-190e-4814-82b3-cdfdc967f96c"
           ]
         }
       ],
-      "x": 153,
-      "y": 511
+      "x": 176,
+      "y": 484
+    },
+    {
+      "type": "command",
+      "name": "roles",
+      "guid": "d0c38788-f876-4799-82d1-7c91811faffc",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "c4a5112f-6627-4137-a111-43576ed26169"
+          ]
+        }
+      ],
+      "x": 179,
+      "y": 349
     },
     {
       "type": "response",
-      "name": "reaction menu",
-      "guid": "0ac07d4e-8994-49ac-825c-832e3146dbd9",
+      "name": "reaction-embed",
+      "guid": "c4a5112f-6627-4137-a111-43576ed26169",
       "reactionFields": [],
       "embedfields": [],
       "saveToVariable": "reactionmenu",
@@ -171,32 +162,32 @@
         {
           "label": "next response",
           "connections": [
-            "375effb3-f085-41c1-90b4-738ff60578eb"
+            "c0972b1a-36e5-4176-91a8-744ad81f1262"
           ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "b59a0035-6048-40c9-840c-3ac11aa315fb"
+          "id": "d0c38788-f876-4799-82d1-7c91811faffc"
         }
       ],
-      "x": 367,
-      "y": 530,
+      "x": 417,
+      "y": 331,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "A6C4FF",
-        "TheBoys Reaction Bot",
+        "99D6FF",
+        "Reaction Roles",
         "https://alex.plaguecraft.xyz/home",
         "Alex Frantz",
         "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
+        "https://alex.plaguecraft.xyz/home",
+        "React to one of these emojis to get a role!\nBroken Heart = Lonely & Broken\nBlack Heart = Couple\nController = Gamers",
         "",
         "",
-        "",
-        "",
-        "",
+        "pain.",
         "false",
         "reactionmenu",
         "temp"
@@ -220,48 +211,48 @@
     },
     {
       "type": "response",
-      "name": "reaction-listener",
-      "guid": "375effb3-f085-41c1-90b4-738ff60578eb",
+      "name": "listener",
+      "guid": "c0972b1a-36e5-4176-91a8-744ad81f1262",
       "reactionFields": [
-        "🖤",
         "💔",
+        "🖤",
         "🎮"
       ],
       "embedfields": [],
       "outputs": [
         {
-          "label": "🖤",
+          "label": "💔",
           "connections": [
-            "22d80d3d-300d-4a24-aad1-1ba970835476"
+            "9d486075-d507-4e3f-ab89-2f428cd5da1c"
           ]
         },
         {
-          "label": "💔",
+          "label": "🖤",
           "connections": [
-            "9db362b5-622c-46f8-843a-5c441ee8b9f2"
+            "0b813fd0-3f7e-4cb3-be85-0ca733bdd37f"
           ]
         },
         {
           "label": "🎮",
           "connections": [
-            "dc251d08-aabd-482d-825c-2776dc885d6a"
+            "d408ba1e-d2b8-4fc3-a6cf-a692312340eb"
           ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "0ac07d4e-8994-49ac-825c-832e3146dbd9"
+          "id": "c4a5112f-6627-4137-a111-43576ed26169"
         }
       ],
-      "x": 550,
-      "y": 552,
+      "x": 653,
+      "y": 392,
       "rtype": "Reaction",
       "rsubtype": "Add Reaction Listener",
       "formdata": [
         "${tempVars.reactionmenu.id}",
         "90",
-        "reaction-emj",
+        "reaction-emoji",
         "reaction-user",
         "BOOL_TRUE@@"
       ],
@@ -275,94 +266,26 @@
     },
     {
       "type": "response",
-      "name": "add-couples",
-      "guid": "22d80d3d-300d-4a24-aad1-1ba970835476",
+      "name": "give-lonely",
+      "guid": "9d486075-d507-4e3f-ab89-2f428cd5da1c",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
         {
           "label": "next response",
           "connections": [
-            "913b3879-04f1-442f-baac-f24d4b88c031"
+            "2bfb4f21-99bd-499d-8adb-a973192595d7"
           ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "375effb3-f085-41c1-90b4-738ff60578eb"
+          "id": "c0972b1a-36e5-4176-91a8-744ad81f1262"
         }
       ],
-      "x": 720,
-      "y": 289,
-      "rtype": "User Action",
-      "rsubtype": "Add Role to User",
-      "formdata": [
-        "${tempVars.reaction.id}",
-        "Couples"
-      ],
-      "formnames": [
-        "user",
-        "roleName"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "confirm-couples",
-      "guid": "913b3879-04f1-442f-baac-f24d4b88c031",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "22d80d3d-300d-4a24-aad1-1ba970835476"
-        }
-      ],
-      "x": 910,
-      "y": 285,
-      "rtype": "Message",
-      "rsubtype": "Send Message",
-      "formdata": [
-        "${dbsVars.CommandChannel.id}",
-        "Thank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Couples** role!",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelName",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "add-lonely",
-      "guid": "9db362b5-622c-46f8-843a-5c441ee8b9f2",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "25db9a41-141d-488a-8aa9-ff828e8b3bfb"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "375effb3-f085-41c1-90b4-738ff60578eb"
-        }
-      ],
-      "x": 731,
-      "y": 424,
+      "x": 820,
+      "y": 169,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -376,63 +299,59 @@
     },
     {
       "type": "response",
-      "name": "confirm-lonely",
-      "guid": "25db9a41-141d-488a-8aa9-ff828e8b3bfb",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "9db362b5-622c-46f8-843a-5c441ee8b9f2"
-        }
-      ],
-      "x": 921,
-      "y": 431,
-      "rtype": "Message",
-      "rsubtype": "Send Message",
-      "formdata": [
-        "${dbsVars.CommandChannel.id}",
-        "Aww.. sorry for your sadness, <@${dbsVars.CommandAuthor.id}>!\nYou now have the **Lonely & Broken** role.",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelName",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "add-gamers",
-      "guid": "dc251d08-aabd-482d-825c-2776dc885d6a",
+      "name": "give-couple",
+      "guid": "0b813fd0-3f7e-4cb3-be85-0ca733bdd37f",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
         {
           "label": "next response",
           "connections": [
-            "b22cf82a-e214-4cee-a5cd-85e555651893"
+            "e9e25114-a630-4fb5-969b-b9800049de08"
           ]
         }
       ],
       "inputs": [
         {
           "label": "trigger",
-          "id": "375effb3-f085-41c1-90b4-738ff60578eb"
+          "id": "c0972b1a-36e5-4176-91a8-744ad81f1262"
         }
       ],
-      "x": 740,
-      "y": 546,
+      "x": 822,
+      "y": 286,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.reaction.id}",
+        "Couples"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "give-gamers",
+      "guid": "d408ba1e-d2b8-4fc3-a6cf-a692312340eb",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cc7cd5dc-4407-4120-bab3-3fc3f60fc870"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c0972b1a-36e5-4176-91a8-744ad81f1262"
+        }
+      ],
+      "x": 831,
+      "y": 407,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
@@ -446,8 +365,8 @@
     },
     {
       "type": "response",
-      "name": "confirm-gamers",
-      "guid": "b22cf82a-e214-4cee-a5cd-85e555651893",
+      "name": "confirm-lonely",
+      "guid": "2bfb4f21-99bd-499d-8adb-a973192595d7",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
@@ -459,16 +378,16 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "dc251d08-aabd-482d-825c-2776dc885d6a"
+          "id": "9d486075-d507-4e3f-ab89-2f428cd5da1c"
         }
       ],
-      "x": 935,
-      "y": 560,
+      "x": 1019,
+      "y": 148,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "Woo! Gaming is fun! You just added **Gamers** to your profile, <@${dbsVars.CommandAuthor.id}>!",
+        "Con.. Congrats? err.. congrats on the role, <@${dbsVars.CommandAuthor.id}>..",
         "",
         "temp"
       ],
@@ -481,59 +400,8 @@
     },
     {
       "type": "response",
-      "name": "test",
-      "guid": "4a874241-0a5d-4a75-b197-33bad7f02145",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "8ac7a539-cdff-45a2-9dcd-68fb714782e6"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "efc792e1-6879-4e48-bedb-53a86d9501b7"
-        }
-      ],
-      "x": 209,
-      "y": 842,
-      "rtype": "Bot Action",
-      "rsubtype": "Set Bot Activity",
-      "formdata": [
-        "music & games",
-        "PLAYING",
-        ""
-      ],
-      "formnames": [
-        "activityname",
-        "activitytype",
-        "streamurl"
-      ]
-    },
-    {
-      "type": "command",
-      "name": "setstatus",
-      "guid": "efc792e1-6879-4e48-bedb-53a86d9501b7",
-      "outputs": [
-        {
-          "label": "responses",
-          "connections": [
-            "4a874241-0a5d-4a75-b197-33bad7f02145"
-          ]
-        }
-      ],
-      "x": 27,
-      "y": 857,
-      "perms": []
-    },
-    {
-      "type": "response",
-      "name": "done",
-      "guid": "8ac7a539-cdff-45a2-9dcd-68fb714782e6",
+      "name": "confirm-couple",
+      "guid": "e9e25114-a630-4fb5-969b-b9800049de08",
       "reactionFields": [],
       "embedfields": [],
       "outputs": [
@@ -545,16 +413,377 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "4a874241-0a5d-4a75-b197-33bad7f02145"
+          "id": "0b813fd0-3f7e-4cb3-be85-0ca733bdd37f"
         }
       ],
-      "x": 424,
-      "y": 810,
+      "x": 1021,
+      "y": 280,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "Done! Look at my status :D",
+        "YOOOO YOU MADE IT <@${dbsVars.CommandAuthor.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "confirm-gamers",
+      "guid": "cc7cd5dc-4407-4120-bab3-3fc3f60fc870",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d408ba1e-d2b8-4fc3-a6cf-a692312340eb"
+        }
+      ],
+      "x": 1029,
+      "y": 410,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "AYO LET'S GAME BOYS\nThank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Gamers** role!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "dev-link",
+      "guid": "3b66e488-8a09-4436-963c-8e798de4ab7e",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "24d3a461-2a28-4888-9617-355a9577b070"
+          ]
+        }
+      ],
+      "x": 173,
+      "y": 631,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "invite-response",
+      "guid": "24d3a461-2a28-4888-9617-355a9577b070",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "3b66e488-8a09-4436-963c-8e798de4ab7e"
+        }
+      ],
+      "x": 353,
+      "y": 620,
+      "rtype": "Message",
+      "rsubtype": "Inv Link",
+      "formdata": [
+        "788688819159171082",
+        "8",
+        "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\n*Developers: $$link$$*"
+      ],
+      "formnames": [
+        "clientid",
+        "permInt",
+        "msgText"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "set-status",
+      "guid": "5bd7cc31-2c84-465d-aed8-2690cc32427f",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "f5131f60-08c1-44e0-955d-81b784d95782"
+          ]
+        }
+      ],
+      "x": 244,
+      "y": 736
+    },
+    {
+      "type": "response",
+      "name": "status",
+      "guid": "f5131f60-08c1-44e0-955d-81b784d95782",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "d98da25c-63f0-4e35-bb46-fd700ff21c28"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
+        }
+      ],
+      "x": 392,
+      "y": 735,
+      "rtype": "Bot Action",
+      "rsubtype": "More Status",
+      "formdata": [
+        "WATCHING",
+        "all of you children! Member Count: $$members$$"
+      ],
+      "formnames": [
+        "statusOption",
+        "statusText"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "report",
+      "guid": "324d5718-6cc9-4cb7-93e2-daebc333ef1e",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": []
+        }
+      ],
+      "x": 681,
+      "y": 618
+    },
+    {
+      "type": "response",
+      "name": "report-store",
+      "guid": "c81984ca-9f9c-4756-bc32-8000035c7567",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "reported-message",
+      "saveToVariableType": "global",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "48e8ff85-bcb9-4103-bc5d-edd0e2506012"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c95849d5-41d0-438a-8bbd-5991e69fcafb"
+        }
+      ],
+      "x": 1092,
+      "y": 618,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "reported-message",
+        "Text",
+        "global",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "report-log",
+      "guid": "48e8ff85-bcb9-4103-bc5d-edd0e2506012",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c81984ca-9f9c-4756-bc32-8000035c7567"
+        }
+      ],
+      "x": 1282,
+      "y": 624,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "reports-log",
+        "99D6FF",
+        "Bad, bad boy!",
+        "",
+        "Alex Frantz",
+        "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
+        "https://alex.plaguecraft.xyz",
+        "User <@${tempVars.report.id}> has been reported! \nReason:\n${globalVars.reported}",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "get-user",
+      "guid": "c95849d5-41d0-438a-8bbd-5991e69fcafb",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c81984ca-9f9c-4756-bc32-8000035c7567"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "324d5718-6cc9-4cb7-93e2-daebc333ef1e"
+        }
+      ],
+      "x": 859,
+      "y": 603,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "report-user",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "finish-status",
+      "guid": "d98da25c-63f0-4e35-bb46-fd700ff21c28",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f5131f60-08c1-44e0-955d-81b784d95782"
+        }
+      ],
+      "x": 603,
+      "y": 721,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Done!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "madi-awex",
+      "guid": "2ff0b092-2d3e-44bf-8152-f81809737ec1",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7c4593ce-4748-4686-8b4c-6bd02fdcc31a"
+          ]
+        }
+      ],
+      "x": 126,
+      "y": 914
+    },
+    {
+      "type": "response",
+      "name": "best-couple",
+      "guid": "7c4593ce-4748-4686-8b4c-6bd02fdcc31a",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2ff0b092-2d3e-44bf-8152-f81809737ec1"
+        }
+      ],
+      "x": 359,
+      "y": 898,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Of course, the BEST couple you could ever meet.",
         "",
         "temp"
       ],

@@ -1,185 +1,87 @@
 {
-  "nodes": [
-    {
-      "type": "event",
-      "name": "User Joins Server",
-      "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f067e",
-      "variables": {
-        "user": "newuser"
-      },
-      "outputs": [
+    "nodes": [
         {
-          "label": "responses",
-          "connections": [
-            "c20a0f26-2dcc-4faa-95da-7098b16a5702"
-          ]
-        }
-      ],
-      "x": 99,
-      "y": 100,
-      "perms": []
-    },
-    {
-      "type": "event",
-      "name": "Any Message",
-      "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f8888",
-      "variables": {
-        "user": "msguser"
-      },
-      "outputs": [
+            "type": "event",
+            "name": "User Joins Server",
+            "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f067e",
+            "variables": {
+                "user": "newuser"
+            },
+            "outputs": [
+                {
+                    "label": "responses",
+                    "connections": []
+                }
+            ],
+            "x": 99,
+            "y": 100,
+            "perms": []
+        },
         {
-          "label": "responses",
-          "connections": []
-        }
-      ],
-      "x": 112,
-      "y": 506,
-      "perms": []
-    },
-    {
-      "type": "event",
-      "name": "User Kicked",
-      "guid": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e",
-      "variables": {
-        "user": "kickuser"
-      },
-      "outputs": [
+            "type": "event",
+            "name": "Any Message",
+            "guid": "49ebbc23-2903-4f05-ab69-bc9ecb4f8888",
+            "variables": {
+                "user": "msguser"
+            },
+            "outputs": [
+                {
+                    "label": "responses",
+                    "connections": []
+                }
+            ],
+            "x": 101,
+            "y": 499,
+            "perms": []
+        },
         {
-          "label": "responses",
-          "connections": []
-        }
-      ],
-      "x": 99,
-      "y": 250,
-      "perms": []
-    },
-    {
-      "type": "event",
-      "name": "User Banned",
-      "guid": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e",
-      "variables": {
-        "user": "banuser"
-      },
-      "outputs": [
+            "type": "event",
+            "name": "User Kicked",
+            "guid": "69ebbc23-2903-4f05-ab69-bc9ecb4f067e",
+            "variables": {
+                "user": "kickuser"
+            },
+            "outputs": [
+                {
+                    "label": "responses",
+                    "connections": []
+                }
+            ],
+            "x": 99,
+            "y": 250,
+            "perms": []
+        },
         {
-          "label": "responses",
-          "connections": [
-            "ddd2cf81-d5ff-456d-8417-2147ea686b75"
-          ]
-        }
-      ],
-      "x": 100,
-      "y": 375,
-      "perms": []
-    },
-    {
-      "type": "event",
-      "name": "Bot Initialization",
-      "guid": "0101bc23-2003-4f05-ab69-bc9ecb4f067e",
-      "variables": {},
-      "outputs": [
+            "type": "event",
+            "name": "User Banned",
+            "guid": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e",
+            "variables": {
+                "user": "banuser"
+            },
+            "outputs": [
+                {
+                    "label": "responses",
+                    "connections": []
+                }
+            ],
+            "x": 100,
+            "y": 375,
+            "perms": []
+        },
         {
-          "label": "responses",
-          "connections": []
+            "type": "event",
+            "name": "Bot Initialization",
+            "guid": "0101bc23-2003-4f05-ab69-bc9ecb4f067e",
+            "variables": {},
+            "outputs": [
+                {
+                    "label": "responses",
+                    "connections": []
+                }
+            ],
+            "x": 100,
+            "y": 625,
+            "perms": []
         }
-      ],
-      "x": 100,
-      "y": 625,
-      "perms": []
-    },
-    {
-      "type": "response",
-      "name": "banned",
-      "guid": "ddd2cf81-d5ff-456d-8417-2147ea686b75",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e"
-        }
-      ],
-      "x": 284,
-      "y": 383,
-      "rtype": "Message",
-      "rsubtype": "Send Embed",
-      "formdata": [
-        "bans",
-        "99D6FF",
-        "Banned!",
-        "https://alex.plaguecraft.xyz/home",
-        "Alex Frantz",
-        "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
-        "https://alex.plaguecraft.xyz/home",
-        "User ${tempVars.banuser.displayName} was banned from this server!",
-        "",
-        "",
-        "Wanna hear a joke? My life.",
-        "false",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelname",
-        "color",
-        "title",
-        "url",
-        "authorname",
-        "authorimageurl",
-        "authorlink",
-        "description",
-        "thumbnail",
-        "image",
-        "footer",
-        "timestamp",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "join",
-      "guid": "c20a0f26-2dcc-4faa-95da-7098b16a5702",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "49ebbc23-2903-4f05-ab69-bc9ecb4f067e"
-        }
-      ],
-      "x": 287,
-      "y": 91,
-      "rtype": "Message",
-      "rsubtype": "Send Message",
-      "formdata": [
-        "joins",
-        "Welcome to the server, <@${tempVars.newuser.id}>!",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelName",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    }
-  ]
+    ]
 }
