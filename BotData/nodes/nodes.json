@@ -52,8 +52,6 @@
           "inline": "true"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -550,8 +548,6 @@
       "guid": "d98da25c-63f0-4e35-bb46-fd700ff21c28",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -652,8 +648,6 @@
       "guid": "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -859,8 +853,6 @@
       "guid": "bf42db2e-7a08-4d65-8c1f-a89ce4c11d0e",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -896,8 +888,6 @@
       "guid": "77cf3439-4db9-4920-9955-95e9b7ae70cc",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1049,8 +1039,6 @@
       "guid": "22608704-b31d-431a-840b-032033d0e0a8",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1119,8 +1107,6 @@
       "guid": "1c785c53-137d-4387-af22-2f4e13428943",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1271,8 +1257,6 @@
       "guid": "66c5ddb1-01f7-43f7-b5cd-ade3ce3f2704",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1323,8 +1307,6 @@
       "guid": "14bd62bd-39ab-4db7-9103-72aec4a2ee75",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1375,8 +1357,6 @@
       "guid": "1c84d264-92c3-439e-87fa-add9dd964711",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1396,6 +1376,110 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "ofc the most perfect girl in the world bruh like how tf is she so fucking perfect i-",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "kat",
+      "guid": "6ec37909-801b-4356-893e-416e449de378",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "782b91be-dd49-42c5-8b06-1fcbad0687a3"
+          ]
+        }
+      ],
+      "x": 78,
+      "y": 1587
+    },
+    {
+      "type": "response",
+      "name": "katresp",
+      "guid": "782b91be-dd49-42c5-8b06-1fcbad0687a3",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6ec37909-801b-4356-893e-416e449de378"
+        }
+      ],
+      "x": 288,
+      "y": 1602,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "*emotional kat whines*",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "lilly-bakugo",
+      "guid": "d60a9d5e-0add-458d-8a95-ade896e64f2f",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "4fae3edf-a162-4801-a0b0-03fe95f03f72"
+          ]
+        }
+      ],
+      "x": 69,
+      "y": 1758
+    },
+    {
+      "type": "response",
+      "name": "bakugoresp",
+      "guid": "4fae3edf-a162-4801-a0b0-03fe95f03f72",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d60a9d5e-0add-458d-8a95-ade896e64f2f"
+        }
+      ],
+      "x": 287,
+      "y": 1773,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "the couple that could never exist..",
         "",
         "temp"
       ],

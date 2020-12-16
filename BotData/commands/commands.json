@@ -395,6 +395,34 @@
           "savetovariabletype": "temp"
         }
       ]
+    },
+    {
+      "name": "kat",
+      "actions": [
+        {
+          "name": "katresp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "*emotional kat whines*",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "lilly-bakugo",
+      "actions": [
+        {
+          "name": "bakugoresp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "the couple that could never exist..",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
     }
   ]
 }
