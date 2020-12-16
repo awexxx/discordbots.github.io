@@ -37,8 +37,18 @@
           "inline": "true"
         },
         {
-          "name": "",
-          "value": "",
+          "name": "?dev-link",
+          "value": "Does a thing. I swear, it does a thing.",
+          "inline": "true"
+        },
+        {
+          "name": "?madi-awex",
+          "value": "The best couple in this server. Fight me.",
+          "inline": "true"
+        },
+        {
+          "name": "?set-status",
+          "value": "Sets bot status. Simple as that. Do I need to talk to you like you're 5?",
           "inline": "true"
         }
       ],
@@ -114,7 +124,7 @@
       "rtype": "Message",
       "rsubtype": "Ping Message",
       "formdata": [
-        "Woah there! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!"
+        "Pong! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!\nThis should stay around 100~. If it's any higher then 300, you should probably contact awex.."
       ],
       "formnames": [
         "pingMessage"
@@ -253,7 +263,7 @@
         "${tempVars.reactionmenu.id}",
         "90",
         "reaction-emoji",
-        "reaction-user",
+        "react-user",
         "BOOL_TRUE@@"
       ],
       "formnames": [
@@ -289,7 +299,7 @@
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
-        "${tempVars.reaction.id}",
+        "${tempVars.react.id}",
         "Lonely"
       ],
       "formnames": [
@@ -322,7 +332,7 @@
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
-        "${tempVars.reaction.id}",
+        "${tempVars.react.id}",
         "Couples"
       ],
       "formnames": [
@@ -350,12 +360,12 @@
           "id": "c0972b1a-36e5-4176-91a8-744ad81f1262"
         }
       ],
-      "x": 831,
+      "x": 832,
       "y": 407,
       "rtype": "User Action",
       "rsubtype": "Add Role to User",
       "formdata": [
-        "${tempVars.reaction.id}",
+        "${tempVars.reaction.id}${tempVars.react.id}",
         "Gamers"
       ],
       "formnames": [
@@ -387,7 +397,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "Con.. Congrats? err.. congrats on the role, <@${dbsVars.CommandAuthor.id}>..",
+        "Con.. Congrats? err.. congrats on the role, <@${tempVars.react.id}>",
         "",
         "temp"
       ],
@@ -422,7 +432,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "YOOOO YOU MADE IT <@${dbsVars.CommandAuthor.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
+        "YOOOO YOU MADE IT <@${tempVars.react.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
         "",
         "temp"
       ],
@@ -457,7 +467,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "AYO LET'S GAME BOYS\nThank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Gamers** role!",
+        "AYO LET'S GAME BOYS\nThank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
         "",
         "temp"
       ],
@@ -509,7 +519,7 @@
       "formdata": [
         "788688819159171082",
         "8",
-        "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\n*Developers: $$link$$*"
+        "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$*"
       ],
       "formnames": [
         "clientid",
@@ -552,13 +562,13 @@
           "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
         }
       ],
-      "x": 392,
-      "y": 735,
+      "x": 423,
+      "y": 732,
       "rtype": "Bot Action",
       "rsubtype": "More Status",
       "formdata": [
         "WATCHING",
-        "all of you children! Member Count: $$members$$"
+        "all of you children! I'm watching you, Wazowski.. Always watching.."
       ],
       "formnames": [
         "statusOption",
@@ -763,8 +773,6 @@
       "guid": "7c4593ce-4748-4686-8b4c-6bd02fdcc31a",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -784,6 +792,158 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "Of course, the BEST couple you could ever meet.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "badbot",
+      "guid": "44dbbbe7-1584-4296-833d-c9846441b539",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c"
+          ]
+        }
+      ],
+      "x": 602,
+      "y": 1031
+    },
+    {
+      "type": "response",
+      "name": "listen-here",
+      "guid": "b18b1b7e-a657-4cd9-a4e5-4e9206f0494c",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "44dbbbe7-1584-4296-833d-c9846441b539"
+        }
+      ],
+      "x": 851,
+      "y": 1006,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandAuthor.user.dmChannel}",
+        "listen here you little shit..",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "demi",
+      "guid": "35cc7c1e-fb0a-4dc3-91e6-7719f8774318",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "0ba41d02-5869-471a-9173-2fa11ab2c881"
+          ]
+        }
+      ],
+      "x": 189,
+      "y": 1116
+    },
+    {
+      "type": "response",
+      "name": "fag",
+      "guid": "0ba41d02-5869-471a-9173-2fa11ab2c881",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "35cc7c1e-fb0a-4dc3-91e6-7719f8774318"
+        }
+      ],
+      "x": 371,
+      "y": 1116,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "faggot",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "nathan-demi",
+      "guid": "f719daeb-02bf-4d21-a9dc-22559190ed41",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d8ccefa6-5105-4d94-909d-024cb79ec0e7"
+          ]
+        }
+      ],
+      "x": 157,
+      "y": 1289
+    },
+    {
+      "type": "response",
+      "name": "resp-nd",
+      "guid": "d8ccefa6-5105-4d94-909d-024cb79ec0e7",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f719daeb-02bf-4d21-a9dc-22559190ed41"
+        }
+      ],
+      "x": 398,
+      "y": 1278,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "the best gay couple baha",
         "",
         "temp"
       ],

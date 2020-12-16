@@ -24,8 +24,18 @@
               "inline": "true"
             },
             {
-              "name": "",
-              "value": "",
+              "name": "?dev-link",
+              "value": "Does a thing. I swear, it does a thing.",
+              "inline": "true"
+            },
+            {
+              "name": "?madi-awex",
+              "value": "The best couple in this server. Fight me.",
+              "inline": "true"
+            },
+            {
+              "name": "?set-status",
+              "value": "Sets bot status. Simple as that. Do I need to talk to you like you're 5?",
               "inline": "true"
             }
           ],
@@ -53,7 +63,7 @@
           "name": "ping-resp",
           "category": "Message",
           "type": "Ping Message",
-          "pingmessage": "Woah there! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!"
+          "pingmessage": "Pong! I'm going _**ZOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOM**_\n\nmy current TPS (ticks per second) is **$$ping$$**!\nThis should stay around 100~. If it's any higher then 300, you should probably contact awex.."
         }
       ]
     },
@@ -89,7 +99,7 @@
                 "name": "give-lonely",
                 "category": "User Action",
                 "type": "Add Role to User",
-                "user": "${tempVars.reaction.id}",
+                "user": "${tempVars.react.id}",
                 "rolename": "Lonely"
               },
               {
@@ -97,7 +107,7 @@
                 "category": "Message",
                 "type": "Send Message",
                 "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Con.. Congrats? err.. congrats on the role, <@${dbsVars.CommandAuthor.id}>..",
+                "messagetext": "Con.. Congrats? err.. congrats on the role, <@${tempVars.react.id}>",
                 "savetovariable": "",
                 "savetovariabletype": "temp"
               }
@@ -107,7 +117,7 @@
                 "name": "give-couple",
                 "category": "User Action",
                 "type": "Add Role to User",
-                "user": "${tempVars.reaction.id}",
+                "user": "${tempVars.react.id}",
                 "rolename": "Couples"
               },
               {
@@ -115,7 +125,7 @@
                 "category": "Message",
                 "type": "Send Message",
                 "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "YOOOO YOU MADE IT <@${dbsVars.CommandAuthor.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
+                "messagetext": "YOOOO YOU MADE IT <@${tempVars.react.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
                 "savetovariable": "",
                 "savetovariabletype": "temp"
               }
@@ -125,7 +135,7 @@
                 "name": "give-gamers",
                 "category": "User Action",
                 "type": "Add Role to User",
-                "user": "${tempVars.reaction.id}",
+                "user": "${tempVars.reaction.id}${tempVars.react.id}",
                 "rolename": "Gamers"
               },
               {
@@ -133,7 +143,7 @@
                 "category": "Message",
                 "type": "Send Message",
                 "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "AYO LET'S GAME BOYS\nThank you, <@${dbsVars.CommandAuthor.id}>! You now have the **Gamers** role!",
+                "messagetext": "AYO LET'S GAME BOYS\nThank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
                 "savetovariable": "",
                 "savetovariabletype": "temp"
               }
@@ -142,7 +152,7 @@
           "message": "${tempVars.reactionmenu.id}",
           "duration": "90",
           "reactionemoji": "reaction-emoji",
-          "reactionuser": "reaction-user",
+          "reactionuser": "react-user",
           "react": "BOOL_TRUE@@"
         }
       ]
@@ -157,7 +167,7 @@
           "type": "Inv Link",
           "clientid": "788688819159171082",
           "permint": "8",
-          "msgtext": "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\n*Developers: $$link$$*"
+          "msgtext": "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$*"
         }
       ]
     },
@@ -169,7 +179,7 @@
           "category": "Bot Action",
           "type": "More Status",
           "statusoption": "WATCHING",
-          "statustext": "all of you children! Member Count: $$members$$"
+          "statustext": "all of you children! I'm watching you, Wazowski.. Always watching.."
         },
         {
           "name": "finish-status",
@@ -195,6 +205,48 @@
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
           "messagetext": "Of course, the BEST couple you could ever meet.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "badbot",
+      "actions": [
+        {
+          "name": "listen-here",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
+          "messagetext": "listen here you little shit..",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "demi",
+      "actions": [
+        {
+          "name": "fag",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "faggot",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "nathan-demi",
+      "actions": [
+        {
+          "name": "resp-nd",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "the best gay couple baha",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
