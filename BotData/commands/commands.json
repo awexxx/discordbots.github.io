@@ -68,96 +68,6 @@
       ]
     },
     {
-      "name": "roles",
-      "actions": [
-        {
-          "name": "reaction-embed",
-          "category": "Message",
-          "type": "Send Embed",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "color": "99D6FF",
-          "title": "Reaction Roles",
-          "url": "https://alex.plaguecraft.xyz/home",
-          "authorname": "Alex Frantz",
-          "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
-          "authorlink": "https://alex.plaguecraft.xyz/home",
-          "description": "React to one of these emojis to get a role!\nBroken Heart = Lonely & Broken\nBlack Heart = Couple\nController = Gamers",
-          "thumbnail": "",
-          "image": "",
-          "footer": "pain.",
-          "timestamp": "false",
-          "savetovariable": "reactionmenu",
-          "savetovariabletype": "temp"
-        },
-        {
-          "name": "listener",
-          "category": "Reaction",
-          "type": "Add Reaction Listener",
-          "reactionActions": {
-            "💔": [
-              {
-                "name": "give-lonely",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.react.id}",
-                "rolename": "Lonely"
-              },
-              {
-                "name": "confirm-lonely",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Con.. Congrats? err.. congrats on the role, <@${tempVars.react.id}>",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "🖤": [
-              {
-                "name": "give-couple",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.react.id}",
-                "rolename": "Couples"
-              },
-              {
-                "name": "confirm-couple",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "YOOOO YOU MADE IT <@${tempVars.react.id}>!!!!!!\nCONGRATS ON THE **COUPLES** ROLE!!!!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "🎮": [
-              {
-                "name": "give-gamers",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.reaction.id}${tempVars.react.id}",
-                "rolename": "Gamers"
-              },
-              {
-                "name": "confirm-gamers",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "AYO LET'S GAME BOYS\nThank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ]
-          },
-          "message": "${tempVars.reactionmenu.id}",
-          "duration": "90",
-          "reactionemoji": "reaction-emoji",
-          "reactionuser": "react-user",
-          "react": "BOOL_TRUE@@"
-        }
-      ]
-    },
-    {
       "name": "dev-link",
       "perms": [],
       "actions": [
@@ -421,6 +331,77 @@
           "messagetext": "the couple that could never exist..",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "roles",
+      "actions": [
+        {
+          "name": "listener",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "🎮": [
+              {
+                "name": "add-lonely_1",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.react.id}",
+                "rolename": "Gamers"
+              },
+              {
+                "name": "confirm-gamers",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${tempVars.react.user.dmChannel}",
+                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "💔": [
+              {
+                "name": "add-lonely",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.react.id}",
+                "rolename": "Lonely"
+              },
+              {
+                "name": "confirm-lonely",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Lonely** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "🖤": [
+              {
+                "name": "add-lonely_1_1",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.react.id}",
+                "rolename": "Couples"
+              },
+              {
+                "name": "confirm-gamers_1",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${tempVars.react.user.dmChannel}",
+                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Couples** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "message": "789161282536079411",
+          "duration": "99999999999",
+          "reactionemoji": "react-emoji",
+          "reactionuser": "react-user",
+          "react": "BOOL_TRUE@@"
         }
       ]
     }
