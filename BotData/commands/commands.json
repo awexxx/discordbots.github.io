@@ -34,8 +34,48 @@
               "inline": "true"
             },
             {
-              "name": "?set-status",
-              "value": "Sets bot status. Simple as that. Do I need to talk to you like you're 5?",
+              "name": "?demi-kat",
+              "value": "Kinky.",
+              "inline": "true"
+            },
+            {
+              "name": "?nathan-demi",
+              "value": "FAGGOTI",
+              "inline": "true"
+            },
+            {
+              "name": "?badbot",
+              "value": "Disciplines the bot with repercussions.",
+              "inline": "true"
+            },
+            {
+              "name": "?goodbot",
+              "value": "Botty boi praises you lmao",
+              "inline": "true"
+            },
+            {
+              "name": "?madi",
+              "value": "HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT ",
+              "inline": "true"
+            },
+            {
+              "name": "?kat",
+              "value": "Still kinky.",
+              "inline": "true"
+            },
+            {
+              "name": "?demi",
+              "value": "Faggot.",
+              "inline": "true"
+            },
+            {
+              "name": "?nathan",
+              "value": ";)",
+              "inline": "true"
+            },
+            {
+              "name": "?lilly",
+              "value": "BAHAHHAHHAHAHAHHAHAHAHAAHAHHAHAHAHAHAHAHHA",
               "inline": "true"
             }
           ],
@@ -338,70 +378,42 @@
       "name": "roles",
       "actions": [
         {
-          "name": "listener",
-          "category": "Reaction",
-          "type": "Add Reaction Listener",
-          "reactionActions": {
-            "🎮": [
-              {
-                "name": "add-lonely_1",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.react.id}",
-                "rolename": "Gamers"
-              },
-              {
-                "name": "confirm-gamers",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${tempVars.react.user.dmChannel}",
-                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "💔": [
-              {
-                "name": "add-lonely",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.react.id}",
-                "rolename": "Lonely"
-              },
-              {
-                "name": "confirm-lonely",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Lonely** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "🖤": [
-              {
-                "name": "add-lonely_1_1",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.react.id}",
-                "rolename": "Couples"
-              },
-              {
-                "name": "confirm-gamers_1",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${tempVars.react.user.dmChannel}",
-                "messagetext": "Thank you, <@${tempVars.react.id}>! You now have the **Couples** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ]
-          },
-          "message": "789161282536079411",
-          "duration": "99999999999",
-          "reactionemoji": "react-emoji",
-          "reactionuser": "react-user",
-          "react": "BOOL_TRUE@@"
+          "name": "deprecated",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Deprecated. Head to #choose-roles.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "nathan",
+      "actions": [
+        {
+          "name": "faggot",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "https://tenor.com/vALx.gif",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "wait-nathan",
+          "category": "Bot Action",
+          "type": "Edited Wait",
+          "seconds": "2"
+        },
+        {
+          "name": "thats-it",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "are you waiting for more? that's it lmao, that's the command",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
         }
       ]
     }

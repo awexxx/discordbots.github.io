@@ -47,8 +47,48 @@
           "inline": "true"
         },
         {
-          "name": "?set-status",
-          "value": "Sets bot status. Simple as that. Do I need to talk to you like you're 5?",
+          "name": "?demi-kat",
+          "value": "Kinky.",
+          "inline": "true"
+        },
+        {
+          "name": "?nathan-demi",
+          "value": "FAGGOTI",
+          "inline": "true"
+        },
+        {
+          "name": "?badbot",
+          "value": "Disciplines the bot with repercussions.",
+          "inline": "true"
+        },
+        {
+          "name": "?goodbot",
+          "value": "Botty boi praises you lmao",
+          "inline": "true"
+        },
+        {
+          "name": "?madi",
+          "value": "HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT ",
+          "inline": "true"
+        },
+        {
+          "name": "?kat",
+          "value": "Still kinky.",
+          "inline": "true"
+        },
+        {
+          "name": "?demi",
+          "value": "Faggot.",
+          "inline": "true"
+        },
+        {
+          "name": "?nathan",
+          "value": ";)",
+          "inline": "true"
+        },
+        {
+          "name": "?lilly",
+          "value": "BAHAHHAHHAHAHAHHAHAHAHAAHAHHAHAHAHAHAHAHHA",
           "inline": "true"
         }
       ],
@@ -217,6 +257,8 @@
       "guid": "d98da25c-63f0-4e35-bb46-fd700ff21c28",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1117,8 +1159,8 @@
           ]
         }
       ],
-      "x": 69,
-      "y": 1758
+      "x": 78,
+      "y": 1663
     },
     {
       "type": "response",
@@ -1139,7 +1181,7 @@
         }
       ],
       "x": 287,
-      "y": 1773,
+      "y": 1709,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -1163,7 +1205,7 @@
         {
           "label": "responses",
           "connections": [
-            "d36d2ba0-1344-4176-b27f-c5e34686cf90"
+            "5cf4f45e-e65c-4778-b5eb-999427bdfd38"
           ]
         }
       ],
@@ -1172,157 +1214,10 @@
     },
     {
       "type": "response",
-      "name": "reaction-menu",
-      "guid": "957fb65d-260d-4e96-b5d9-6d095dac43ce",
-      "reactionFields": [],
-      "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "86da900b-ece6-41a9-ac79-8842d76d3fb5"
-        }
-      ],
-      "x": 293,
-      "y": 303,
-      "rtype": "Message",
-      "rsubtype": "Send Embed",
-      "formdata": [
-        "${dbsVars.CommandChannel.id}",
-        "99D6FF",
-        "TheBoysBot Reaction Roles",
-        "",
-        "",
-        "",
-        "",
-        "Click the reactions to get roles\nController = Gamers\nBroken Heart = Lonely\nBlack Heart = Couple",
-        "",
-        "",
-        "",
-        "false",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelname",
-        "color",
-        "title",
-        "url",
-        "authorname",
-        "authorimageurl",
-        "authorlink",
-        "description",
-        "thumbnail",
-        "image",
-        "footer",
-        "timestamp",
-        "saveToVariable",
-        "saveToVariableType"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "listener",
-      "guid": "d36d2ba0-1344-4176-b27f-c5e34686cf90",
-      "reactionFields": [
-        "🎮",
-        "💔",
-        "🖤"
-      ],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "🎮",
-          "connections": [
-            "6230bd63-fcbd-4b14-add2-e8d7483f4ab5"
-          ]
-        },
-        {
-          "label": "💔",
-          "connections": [
-            "05a3ccf7-4aff-4697-8d26-5a6ebebe2c46"
-          ]
-        },
-        {
-          "label": "🖤",
-          "connections": [
-            "445df4e2-e346-4d47-89ab-3fad4ec3b10e"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "86da900b-ece6-41a9-ac79-8842d76d3fb5"
-        }
-      ],
-      "x": 589,
-      "y": 218,
-      "rtype": "Reaction",
-      "rsubtype": "Add Reaction Listener",
-      "formdata": [
-        "789161282536079411",
-        "99999999999",
-        "react-emoji",
-        "react-user",
-        "BOOL_TRUE@@"
-      ],
-      "formnames": [
-        "message",
-        "duration",
-        "reactionemoji",
-        "reactionuser",
-        "react"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "add-lonely",
-      "guid": "05a3ccf7-4aff-4697-8d26-5a6ebebe2c46",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "21f42f1f-72cd-40e6-980f-7c166f188258"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "d36d2ba0-1344-4176-b27f-c5e34686cf90"
-        }
-      ],
-      "x": 534,
-      "y": 101,
-      "rtype": "User Action",
-      "rsubtype": "Add Role to User",
-      "formdata": [
-        "${tempVars.react.id}",
-        "Lonely"
-      ],
-      "formnames": [
-        "user",
-        "roleName"
-      ]
-    },
-    {
-      "type": "response",
       "name": "confirm-lonely",
       "guid": "21f42f1f-72cd-40e6-980f-7c166f188258",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1332,7 +1227,7 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "05a3ccf7-4aff-4697-8d26-5a6ebebe2c46"
+          "id": ""
         }
       ],
       "x": 583,
@@ -1354,74 +1249,8 @@
     },
     {
       "type": "response",
-      "name": "add-lonely_1",
-      "guid": "6230bd63-fcbd-4b14-add2-e8d7483f4ab5",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "0acf820b-aef9-4778-a0cb-5f802b8d1b30"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "d36d2ba0-1344-4176-b27f-c5e34686cf90"
-        }
-      ],
-      "x": 778,
-      "y": 105,
-      "rtype": "User Action",
-      "rsubtype": "Add Role to User",
-      "formdata": [
-        "${tempVars.react.id}",
-        "Gamers"
-      ],
-      "formnames": [
-        "user",
-        "roleName"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "add-lonely_1_1",
-      "guid": "445df4e2-e346-4d47-89ab-3fad4ec3b10e",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "dfe95ffb-71aa-4803-95fa-0944510f0a35"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "d36d2ba0-1344-4176-b27f-c5e34686cf90"
-        }
-      ],
-      "x": 793,
-      "y": 240,
-      "rtype": "User Action",
-      "rsubtype": "Add Role to User",
-      "formdata": [
-        "${tempVars.react.id}",
-        "Couples"
-      ],
-      "formnames": [
-        "user",
-        "roleName"
-      ]
-    },
-    {
-      "type": "response",
-      "name": "confirm-gamers",
-      "guid": "0acf820b-aef9-4778-a0cb-5f802b8d1b30",
+      "name": "deprecated",
+      "guid": "5cf4f45e-e65c-4778-b5eb-999427bdfd38",
       "reactionFields": [],
       "embedfields": [],
       "saveToVariable": "",
@@ -1435,16 +1264,70 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "6230bd63-fcbd-4b14-add2-e8d7483f4ab5"
+          "id": "86da900b-ece6-41a9-ac79-8842d76d3fb5"
         }
       ],
-      "x": 960,
-      "y": 80,
+      "x": 319,
+      "y": 307,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
-        "${tempVars.react.user.dmChannel}",
-        "Thank you, <@${tempVars.react.id}>! You now have the **Gamers** role!",
+        "${dbsVars.CommandChannel.id}",
+        "Deprecated. Head to #choose-roles.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "nathan",
+      "guid": "9457f59c-cb81-4b56-bcec-0c6648fdc4df",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "1e3c36f6-a33c-40d6-905c-a0dbdb960b9d"
+          ]
+        }
+      ],
+      "x": 75,
+      "y": 1872
+    },
+    {
+      "type": "response",
+      "name": "faggot",
+      "guid": "1e3c36f6-a33c-40d6-905c-a0dbdb960b9d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "1b05140f-68ac-4df4-9b24-fb05c9885d30"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9457f59c-cb81-4b56-bcec-0c6648fdc4df"
+        }
+      ],
+      "x": 289,
+      "y": 1863,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "https://tenor.com/vALx.gif",
         "",
         "temp"
       ],
@@ -1457,8 +1340,39 @@
     },
     {
       "type": "response",
-      "name": "confirm-gamers_1",
-      "guid": "dfe95ffb-71aa-4803-95fa-0944510f0a35",
+      "name": "wait-nathan",
+      "guid": "1b05140f-68ac-4df4-9b24-fb05c9885d30",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "46fbfc3c-cbc7-4fe8-ac93-6360c4bc3921"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "1e3c36f6-a33c-40d6-905c-a0dbdb960b9d"
+        }
+      ],
+      "x": 544,
+      "y": 1894,
+      "rtype": "Bot Action",
+      "rsubtype": "Edited Wait",
+      "formdata": [
+        "2"
+      ],
+      "formnames": [
+        "seconds"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "thats-it",
+      "guid": "46fbfc3c-cbc7-4fe8-ac93-6360c4bc3921",
       "reactionFields": [],
       "embedfields": [],
       "saveToVariable": "",
@@ -1472,16 +1386,16 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "445df4e2-e346-4d47-89ab-3fad4ec3b10e"
+          "id": "1b05140f-68ac-4df4-9b24-fb05c9885d30"
         }
       ],
-      "x": 987,
-      "y": 248,
+      "x": 788,
+      "y": 1884,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
-        "${tempVars.react.user.dmChannel}",
-        "Thank you, <@${tempVars.react.id}>! You now have the **Couples** role!",
+        "${dbsVars.CommandChannel.id}",
+        "are you waiting for more? that's it lmao, that's the command",
         "",
         "temp"
       ],
