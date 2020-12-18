@@ -48,7 +48,7 @@
         },
         {
           "name": "?demi-kat",
-          "value": "Kinky.",
+          "value": "Deprecated. Command will not run.",
           "inline": "true"
         },
         {
@@ -228,7 +228,7 @@
       "formdata": [
         "788688819159171082",
         "8",
-        "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$*"
+        "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$\nIf you are interested in helping develop this bot, let me know!*"
       ],
       "formnames": [
         "clientid",
@@ -511,6 +511,8 @@
       "guid": "4c1ad58c-f86f-45af-8475-c79177c5d846",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -529,7 +531,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandAuthor.user.dmChannel}",
-        "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/?ref=bot-gen",
+        "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/home?ref=bot-gen",
         "",
         "temp"
       ],
@@ -626,56 +628,6 @@
         "varname",
         "vartype",
         "saveVarType"
-      ]
-    },
-    {
-      "type": "command",
-      "name": "demi-kat",
-      "guid": "948c6290-11ad-4dbb-8410-488a7145c681",
-      "outputs": [
-        {
-          "label": "responses",
-          "connections": [
-            "bd5016ff-6f2b-4fb1-9094-9bcbdebf54f2"
-          ]
-        }
-      ],
-      "x": 888,
-      "y": 1355
-    },
-    {
-      "type": "response",
-      "name": "dk-resp",
-      "guid": "bd5016ff-6f2b-4fb1-9094-9bcbdebf54f2",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": []
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "948c6290-11ad-4dbb-8410-488a7145c681"
-        }
-      ],
-      "x": 1099,
-      "y": 1368,
-      "rtype": "Message",
-      "rsubtype": "Send Message",
-      "formdata": [
-        "${dbsVars.CommandChannel.id}",
-        "the kinkiest couple.. demi and kat",
-        "",
-        "temp"
-      ],
-      "formnames": [
-        "channelName",
-        "messageText",
-        "saveToVariable",
-        "saveToVariableType"
       ]
     },
     {

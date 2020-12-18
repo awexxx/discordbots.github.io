@@ -35,7 +35,7 @@
             },
             {
               "name": "?demi-kat",
-              "value": "Kinky.",
+              "value": "Deprecated. Command will not run.",
               "inline": "true"
             },
             {
@@ -117,7 +117,7 @@
           "type": "Inv Link",
           "clientid": "788688819159171082",
           "permint": "8",
-          "msgtext": "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$*"
+          "msgtext": "Woah there! This link **only** works for the Developer Account owner! What are you doing running this command..\n\nFor you guys, the invite to join the server is https://discord.gg/dWFDGTnVwC\n\n*Developers: $$link$$\nIf you are interested in helping develop this bot, let me know!*"
         }
       ]
     },
@@ -259,7 +259,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
-          "messagetext": "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/?ref=bot-gen",
+          "messagetext": "THANK YOU I APPRECIATE IT I LOVE YOU\nSHOW MY DEVELOPER LOVE FOR MAKING SUCH A GOOD BOT\nhttps://alex.plaguecraft.xyz/home?ref=bot-gen",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -285,20 +285,6 @@
           "type": "Send Message",
           "channelname": "${tempVars.mentioned.user.dmChannel}",
           "messagetext": "Yo! You've been warned >:)\nBe good! We're all friends, but you pushed some buttons and someone baby raged. **Be careful!**",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
-    },
-    {
-      "name": "demi-kat",
-      "actions": [
-        {
-          "name": "dk-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "the kinkiest couple.. demi and kat",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
