@@ -90,10 +90,18 @@
           "name": "?lilly",
           "value": "BAHAHHAHHAHAHAHHAHAHAHAAHAHHAHAHAHAHAHAHHA",
           "inline": "true"
+        },
+        {
+          "name": "?docs",
+          "value": "Displays Docs link",
+          "inline": "true"
+        },
+        {
+          "name": "?ut",
+          "value": "Displays bot uptime",
+          "inline": "true"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -107,7 +115,7 @@
         }
       ],
       "x": 347,
-      "y": 182,
+      "y": 181,
       "rtype": "Message",
       "rsubtype": "Send Embed",
       "formdata": [
@@ -257,8 +265,6 @@
       "guid": "d98da25c-63f0-4e35-bb46-fd700ff21c28",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -511,8 +517,6 @@
       "guid": "4c1ad58c-f86f-45af-8475-c79177c5d846",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1205,8 +1209,6 @@
       "guid": "5cf4f45e-e65c-4778-b5eb-999427bdfd38",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1257,8 +1259,6 @@
       "guid": "1e3c36f6-a33c-40d6-905c-a0dbdb960b9d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1327,8 +1327,6 @@
       "guid": "46fbfc3c-cbc7-4fe8-ac93-6360c4bc3921",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1357,6 +1355,144 @@
         "saveToVariable",
         "saveToVariableType"
       ]
+    },
+    {
+      "type": "command",
+      "name": "docs",
+      "guid": "d4e8384c-edcb-4f38-94bf-6488a336a042",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "95977d8a-8486-4021-bb63-b5ebdbc0a05b"
+          ]
+        }
+      ],
+      "x": 674,
+      "y": 280
+    },
+    {
+      "type": "response",
+      "name": "docs-resp",
+      "guid": "95977d8a-8486-4021-bb63-b5ebdbc0a05b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d4e8384c-edcb-4f38-94bf-6488a336a042"
+        }
+      ],
+      "x": 920,
+      "y": 263,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Hey, <@${dbsVars.CommandAuthor.id}>! Here's the link to the PC Docs page for TheBoysBot.\nhttps://docs.plaguecraft.xyz/docs/tbb",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "ut-resp",
+      "guid": "2eb74472-e4eb-4da6-93f1-389edb5cbd18",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "76ba7843-501e-46f4-b34c-b1eba8e70a75"
+        }
+      ],
+      "x": 1520,
+      "y": 244,
+      "rtype": "Message",
+      "rsubtype": "Up Time",
+      "formdata": [
+        "I'm definitely alive ;( I've been up for $$hours$$ hours and $$minutes$$ minutes now!"
+      ],
+      "formnames": [
+        "uptimemsg"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "ut",
+      "guid": "76ba7843-501e-46f4-b34c-b1eba8e70a75",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "2eb74472-e4eb-4da6-93f1-389edb5cbd18"
+          ]
+        }
+      ],
+      "x": 1356,
+      "y": 257
+    },
+    {
+      "type": "response",
+      "name": "gt-info",
+      "guid": "b58b5a59-09aa-4ec5-9b0e-8b229aa4e185",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "523ec7bb-4591-4c1f-88fb-829aa62c7d2b"
+        }
+      ],
+      "x": 1148,
+      "y": 80,
+      "rtype": "Message",
+      "rsubtype": "Get Server Info",
+      "formdata": [
+        "**The Misfits** server currently has $$members$$ members. It was created on $$date$$. Icon: $$icon$$"
+      ],
+      "formnames": [
+        "info"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "523ec7bb-4591-4c1f-88fb-829aa62c7d2b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "b58b5a59-09aa-4ec5-9b0e-8b229aa4e185"
+          ]
+        }
+      ],
+      "x": 959,
+      "y": 119
     }
   ]
 }

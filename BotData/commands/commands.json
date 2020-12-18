@@ -77,6 +77,16 @@
               "name": "?lilly",
               "value": "BAHAHHAHHAHAHAHHAHAHAHAAHAHHAHAHAHAHAHAHHA",
               "inline": "true"
+            },
+            {
+              "name": "?docs",
+              "value": "Displays Docs link",
+              "inline": "true"
+            },
+            {
+              "name": "?ut",
+              "value": "Displays bot uptime",
+              "inline": "true"
             }
           ],
           "channelname": "${dbsVars.CommandChannel.id}",
@@ -400,6 +410,42 @@
           "messagetext": "are you waiting for more? that's it lmao, that's the command",
           "savetovariable": "",
           "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "docs",
+      "actions": [
+        {
+          "name": "docs-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Hey, <@${dbsVars.CommandAuthor.id}>! Here's the link to the PC Docs page for TheBoysBot.\nhttps://docs.plaguecraft.xyz/docs/tbb",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "ut",
+      "actions": [
+        {
+          "name": "ut-resp",
+          "category": "Message",
+          "type": "Up Time",
+          "uptimemsg": "I'm definitely alive ;( I've been up for $$hours$$ hours and $$minutes$$ minutes now!"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "gt-info",
+          "category": "Message",
+          "type": "Get Server Info",
+          "info": "**The Misfits** server currently has $$members$$ members. It was created on $$date$$. Icon: $$icon$$"
         }
       ]
     }
