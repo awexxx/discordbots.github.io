@@ -4,103 +4,11 @@
       "name": "help",
       "actions": [
         {
-          "name": "help menu",
+          "name": "help-resp",
           "category": "Message",
-          "type": "Send Embed",
-          "fields": [
-            {
-              "name": "?help",
-              "value": "Shows this menu",
-              "inline": "true"
-            },
-            {
-              "name": "?ping",
-              "value": "Shows some info about ping (ticks per second)",
-              "inline": "true"
-            },
-            {
-              "name": "?roles",
-              "value": "Displays reaction role menu ",
-              "inline": "true"
-            },
-            {
-              "name": "?dev-link",
-              "value": "Does a thing. I swear, it does a thing.",
-              "inline": "true"
-            },
-            {
-              "name": "?madi-awex",
-              "value": "The best couple in this server. Fight me.",
-              "inline": "true"
-            },
-            {
-              "name": "?demi-kat",
-              "value": "Deprecated. Command will not run.",
-              "inline": "true"
-            },
-            {
-              "name": "?nathan-demi",
-              "value": "FAGGOTI",
-              "inline": "true"
-            },
-            {
-              "name": "?badbot",
-              "value": "Disciplines the bot with repercussions.",
-              "inline": "true"
-            },
-            {
-              "name": "?goodbot",
-              "value": "Botty boi praises you lmao",
-              "inline": "true"
-            },
-            {
-              "name": "?madi",
-              "value": "HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT HOT ",
-              "inline": "true"
-            },
-            {
-              "name": "?kat",
-              "value": "Still kinky.",
-              "inline": "true"
-            },
-            {
-              "name": "?demi",
-              "value": "Faggot.",
-              "inline": "true"
-            },
-            {
-              "name": "?nathan",
-              "value": ";)",
-              "inline": "true"
-            },
-            {
-              "name": "?lilly",
-              "value": "BAHAHHAHHAHAHAHHAHAHAHAAHAHHAHAHAHAHAHAHHA",
-              "inline": "true"
-            },
-            {
-              "name": "?docs",
-              "value": "Displays Docs link",
-              "inline": "true"
-            },
-            {
-              "name": "?ut",
-              "value": "Displays bot uptime",
-              "inline": "true"
-            }
-          ],
+          "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "color": "99D6FF",
-          "title": "Help Menu",
-          "url": "",
-          "authorname": "Alex Frantz",
-          "authorimageurl": "https://dl.plaguecraft.xyz/dir/assets/fgsmp/img/team/awex.jpg",
-          "authorlink": "https://alex.plaguecraft.xyz/home",
-          "description": "YOYO WHAT's UP IM HERE TO HELP YOU LOLOLOLOOLOLOL",
-          "thumbnail": "",
-          "image": "",
-          "footer": "Why are we still here.. just to suffer..",
-          "timestamp": "false",
+          "messagetext": "**Deprecated.**\nAll commands are now listed at our developer documents.\nHead to https://docs.plaguecraft.xyz/tbb#commands.",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
