@@ -1683,8 +1683,6 @@
           "inline": "true"
         }
       ],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -2043,6 +2041,284 @@
         "Number",
         "temp",
         "3"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "tttttt",
+      "guid": "ab36da86-d5a1-404b-b811-0535f67de349",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f622e121-9e54-4a68-879c-4461506bd55d"
+        }
+      ],
+      "x": 1617,
+      "y": 589,
+      "rtype": "Message",
+      "rsubtype": "Pin Mod",
+      "formdata": [
+        "Fixed",
+        "testing this"
+      ],
+      "formnames": [
+        "PinMode",
+        "messageText"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "pin",
+      "guid": "f622e121-9e54-4a68-879c-4461506bd55d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ab36da86-d5a1-404b-b811-0535f67de349"
+          ]
+        }
+      ],
+      "x": 1419,
+      "y": 591
+    },
+    {
+      "type": "command",
+      "name": "gamenight-help",
+      "guid": "f094da46-3ccf-4d9e-b122-9aec12ba02e3",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "c108e321-a3eb-44f6-bf16-6d3d13a9b061"
+          ]
+        }
+      ],
+      "x": 261,
+      "y": 2025
+    },
+    {
+      "type": "response",
+      "name": "gmh-resp",
+      "guid": "c108e321-a3eb-44f6-bf16-6d3d13a9b061",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "?setcode",
+          "value": "Sets the game code to be displayed later.",
+          "inline": "true"
+        },
+        {
+          "name": "?game-code",
+          "value": "Displays the game code in an embed set from ?setcode.",
+          "inline": "true"
+        },
+        {
+          "name": "?games",
+          "value": "Displays the current game night game(s).",
+          "inline": "true"
+        },
+        {
+          "name": "?kast",
+          "value": "Displays a Kast.gg link (if you would prefer to watch the stream)",
+          "inline": "true"
+        }
+      ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f094da46-3ccf-4d9e-b122-9aec12ba02e3"
+        }
+      ],
+      "x": 458,
+      "y": 2016,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "99D6FF",
+        "TheBoysBot Game Night Help",
+        "",
+        "",
+        "",
+        "",
+        "This command stores a game code from games like **Among Us** into a Javascript variable and shows when you run a certain command.",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "games",
+      "guid": "2a084ed5-c550-48a4-9e8c-bbe2dd55afe0",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "4b1fc528-4f65-4926-8a16-3fa2b693f277"
+          ]
+        }
+      ],
+      "x": 73,
+      "y": 2171
+    },
+    {
+      "type": "response",
+      "name": "send-game",
+      "guid": "4b1fc528-4f65-4926-8a16-3fa2b693f277",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2a084ed5-c550-48a4-9e8c-bbe2dd55afe0"
+        }
+      ],
+      "x": 320,
+      "y": 2164,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Hey, <@${dbsVars.CommandAuthor.id}>! The current set game is **${tempVars.setGame}**.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "set-game",
+      "guid": "e6b5a036-c6bd-4418-90ea-15a8e563dfa8",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "d9547af6-0546-4c13-8fb9-c5cc3d1f6a18"
+          ]
+        }
+      ],
+      "x": 80,
+      "y": 2368
+    },
+    {
+      "type": "response",
+      "name": "set-game-resp",
+      "guid": "143faf4d-c636-48fa-86a8-3ca6f85c67a8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "d9547af6-0546-4c13-8fb9-c5cc3d1f6a18"
+        }
+      ],
+      "x": 470,
+      "y": 2395,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Game set!\n**Current game: ${tempVars.setGame}**",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "store-game",
+      "guid": "d9547af6-0546-4c13-8fb9-c5cc3d1f6a18",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "setGame",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "143faf4d-c636-48fa-86a8-3ca6f85c67a8"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e6b5a036-c6bd-4418-90ea-15a8e563dfa8"
+        }
+      ],
+      "x": 281,
+      "y": 2363,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "setGame",
+        "Number",
+        "temp",
+        "0"
       ],
       "formnames": [
         "varname",

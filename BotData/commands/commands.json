@@ -552,6 +552,101 @@
           "savetovariabletype": "temp"
         }
       ]
+    },
+    {
+      "name": "pin",
+      "actions": [
+        {
+          "name": "tttttt",
+          "category": "Message",
+          "type": "Pin Mod",
+          "pinmode": "Fixed",
+          "messagetext": "testing this"
+        }
+      ]
+    },
+    {
+      "name": "gamenight-help",
+      "actions": [
+        {
+          "name": "gmh-resp",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "?setcode",
+              "value": "Sets the game code to be displayed later.",
+              "inline": "true"
+            },
+            {
+              "name": "?game-code",
+              "value": "Displays the game code in an embed set from ?setcode.",
+              "inline": "true"
+            },
+            {
+              "name": "?games",
+              "value": "Displays the current game night game(s).",
+              "inline": "true"
+            },
+            {
+              "name": "?kast",
+              "value": "Displays a Kast.gg link (if you would prefer to watch the stream)",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "99D6FF",
+          "title": "TheBoysBot Game Night Help",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "This command stores a game code from games like **Among Us** into a Javascript variable and shows when you run a certain command.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "games",
+      "actions": [
+        {
+          "name": "send-game",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Hey, <@${dbsVars.CommandAuthor.id}>! The current set game is **${tempVars.setGame}**.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "set-game",
+      "actions": [
+        {
+          "name": "store-game",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "setGame",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "set-game-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Game set!\n**Current game: ${tempVars.setGame}**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
     }
   ]
 }
