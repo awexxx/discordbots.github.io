@@ -116,7 +116,7 @@
         {
           "label": "responses",
           "connections": [
-            "a328d6a0-7fc8-48ef-88c2-9d283880cc44"
+            "7899b919-3c64-4c56-bab4-bf3f78016c53"
           ]
         }
       ],
@@ -443,11 +443,11 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "77cf3439-4db9-4920-9955-95e9b7ae70cc"
+          "id": "8f0bbfb0-6ba9-4efb-a97a-f5d8536962b2"
         }
       ],
-      "x": 619,
-      "y": 1428,
+      "x": 670,
+      "y": 1432,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
@@ -473,7 +473,7 @@
         {
           "label": "next response",
           "connections": [
-            "bf42db2e-7a08-4d65-8c1f-a89ce4c11d0e"
+            "8f0bbfb0-6ba9-4efb-a97a-f5d8536962b2"
           ]
         }
       ],
@@ -483,12 +483,12 @@
           "id": "0acee19d-370f-46cb-b315-1b591a3a228b"
         }
       ],
-      "x": 355,
-      "y": 1431,
+      "x": 288,
+      "y": 1435,
       "rtype": "Variable",
       "rsubtype": "Get Mentioned User",
       "formdata": [
-        "mentioned-user",
+        "warned-user",
         "User",
         "temp"
       ],
@@ -701,39 +701,6 @@
     },
     {
       "type": "response",
-      "name": "new-status",
-      "guid": "a328d6a0-7fc8-48ef-88c2-9d283880cc44",
-      "reactionFields": [],
-      "embedfields": [],
-      "outputs": [
-        {
-          "label": "next response",
-          "connections": [
-            "529c790b-df23-4521-bd93-6c11bfaf717f"
-          ]
-        }
-      ],
-      "inputs": [
-        {
-          "label": "trigger",
-          "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
-        }
-      ],
-      "x": 1038,
-      "y": 952,
-      "rtype": "Bot Action",
-      "rsubtype": "More Status",
-      "formdata": [
-        "WATCHING",
-        "you >:("
-      ],
-      "formnames": [
-        "statusOption",
-        "statusText"
-      ]
-    },
-    {
-      "type": "response",
       "name": "dones",
       "guid": "529c790b-df23-4521-bd93-6c11bfaf717f",
       "reactionFields": [],
@@ -747,16 +714,16 @@
       "inputs": [
         {
           "label": "trigger",
-          "id": "a328d6a0-7fc8-48ef-88c2-9d283880cc44"
+          "id": "6beebabe-68f3-4231-b2c7-38eb440a77db"
         }
       ],
-      "x": 1265,
-      "y": 974,
+      "x": 1427,
+      "y": 947,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "${dbsVars.CommandChannel.id}",
-        "done ;/",
+        "Done! Check my status ;)",
         "",
         "temp"
       ],
@@ -1025,12 +992,12 @@
         {
           "label": "responses",
           "connections": [
-            "5cf4f45e-e65c-4778-b5eb-999427bdfd38"
+            "12dfdab0-64ce-427f-8df5-4bde6719f778"
           ]
         }
       ],
-      "x": 102,
-      "y": 343
+      "x": 988,
+      "y": 395
     },
     {
       "type": "response",
@@ -1288,8 +1255,8 @@
           "id": "76ba7843-501e-46f4-b34c-b1eba8e70a75"
         }
       ],
-      "x": 1520,
-      "y": 244,
+      "x": 1250,
+      "y": 258,
       "rtype": "Message",
       "rsubtype": "Up Time",
       "formdata": [
@@ -1311,7 +1278,7 @@
           ]
         }
       ],
-      "x": 1356,
+      "x": 1090,
       "y": 257
     },
     {
@@ -1406,7 +1373,11 @@
         }
       ],
       "x": 912,
-      "y": 1431
+      "y": 1431,
+      "perms": [
+        "madi & awex",
+        "gna"
+      ]
     },
     {
       "type": "response",
@@ -1523,8 +1494,6 @@
       "guid": "cc0bb358-1829-4292-811c-87b2de1ee091",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1552,6 +1521,534 @@
         "messageText",
         "saveToVariable",
         "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send-roles",
+      "guid": "12dfdab0-64ce-427f-8df5-4bde6719f778",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "reaction-menu",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "9ec934c6-79c0-4823-b8e1-04a2727b45c1"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "86da900b-ece6-41a9-ac79-8842d76d3fb5"
+        }
+      ],
+      "x": 1170,
+      "y": 380,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "99D6FF",
+        "TheBoysBot Reaction Roles",
+        "",
+        "",
+        "",
+        "",
+        "Click one of the reactions to get a role of your choice!",
+        "",
+        "",
+        "",
+        "false",
+        "reaction-menu",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "listener",
+      "guid": "9ec934c6-79c0-4823-b8e1-04a2727b45c1",
+      "reactionFields": [
+        "🎮",
+        "🖤",
+        "💔"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "🎮",
+          "connections": [
+            "ba4e4ee3-23de-407e-9285-452bdf4147e8"
+          ]
+        },
+        {
+          "label": "🖤",
+          "connections": [
+            "6b44801d-fb9e-4f03-b49d-1d36435b1942"
+          ]
+        },
+        {
+          "label": "💔",
+          "connections": [
+            "326bca59-6e6c-4f5e-a78c-c5e3406cdb74"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "12dfdab0-64ce-427f-8df5-4bde6719f778"
+        }
+      ],
+      "x": 1380,
+      "y": 382,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.reaction.id}",
+        "999",
+        "reaction-emoji",
+        "reacted-user",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "admin-help",
+      "guid": "03406ba4-2c25-4339-a7c5-e844002f66e2",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "94d3d205-f2ce-4d89-91d9-78c237b31e89"
+          ]
+        }
+      ],
+      "x": 921,
+      "y": 511,
+      "perms": [
+        "madi & awex",
+        "gna"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "admin-help-resp",
+      "guid": "94d3d205-f2ce-4d89-91d9-78c237b31e89",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "?setcode",
+          "value": "Stores Game Night code in a variable; run ?game-code for the code.",
+          "inline": "true"
+        },
+        {
+          "name": "?warn",
+          "value": "Sends a warning via DM to said user and logs it in #logs (only use if someone is being violently mean, banter is **not** warnable)",
+          "inline": "true"
+        },
+        {
+          "name": "?dev-link",
+          "value": "If you are whitlelisted for the bot, the API whitelist link is available to invite this bot to your server. However, It is fully not recommended as The Misfits is hard-coded into this bot.",
+          "inline": "true"
+        },
+        {
+          "name": "?set-status",
+          "value": "Sets the bots status to what you'd want",
+          "inline": "true"
+        }
+      ],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "03406ba4-2c25-4339-a7c5-e844002f66e2"
+        }
+      ],
+      "x": 1107,
+      "y": 499,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandAuthor.user.dmChannel}",
+        "99D6FF",
+        "TheBoysBot Administration Commands",
+        "",
+        "Alex Frantz",
+        "",
+        "",
+        "This command displays all of the admin commands contained in TBB.",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "store-status",
+      "guid": "7899b919-3c64-4c56-bab4-bf3f78016c53",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "status",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "6beebabe-68f3-4231-b2c7-38eb440a77db"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5bd7cc31-2c84-465d-aed8-2690cc32427f"
+        }
+      ],
+      "x": 1069,
+      "y": 883,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "status",
+        "Number",
+        "temp",
+        "0"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "bot-act",
+      "guid": "6beebabe-68f3-4231-b2c7-38eb440a77db",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "529c790b-df23-4521-bd93-6c11bfaf717f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7899b919-3c64-4c56-bab4-bf3f78016c53"
+        }
+      ],
+      "x": 1248,
+      "y": 907,
+      "rtype": "Bot Action",
+      "rsubtype": "Set Bot Activity",
+      "formdata": [
+        "${tempVars.status}",
+        "PLAYING",
+        ""
+      ],
+      "formnames": [
+        "activityname",
+        "activitytype",
+        "streamurl"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add-gamers",
+      "guid": "ba4e4ee3-23de-407e-9285-452bdf4147e8",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "414add38-0198-43fd-957d-5a32e8f1e81d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9ec934c6-79c0-4823-b8e1-04a2727b45c1"
+        }
+      ],
+      "x": 1529,
+      "y": 189,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.reacted.id}",
+        "Gamers"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "confirm-gamers",
+      "guid": "414add38-0198-43fd-957d-5a32e8f1e81d",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ba4e4ee3-23de-407e-9285-452bdf4147e8"
+        }
+      ],
+      "x": 1530,
+      "y": 49,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Thank you, <@${tempVars.reacted.id}>! You now have the **Gamers** role!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add-couples",
+      "guid": "6b44801d-fb9e-4f03-b49d-1d36435b1942",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "98b71ee9-4668-4493-926e-ed029548cc7b"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9ec934c6-79c0-4823-b8e1-04a2727b45c1"
+        }
+      ],
+      "x": 1534,
+      "y": 313,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.reacted.id}",
+        "Couples"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "confirm-couples",
+      "guid": "98b71ee9-4668-4493-926e-ed029548cc7b",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "6b44801d-fb9e-4f03-b49d-1d36435b1942"
+        }
+      ],
+      "x": 1732,
+      "y": 284,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Thank you, <@${tempVars.reacted.id}>! You now have the **Couples** role!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "add-lonely",
+      "guid": "326bca59-6e6c-4f5e-a78c-c5e3406cdb74",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "89532252-e776-4faf-bc8e-da0afce5ecee"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "9ec934c6-79c0-4823-b8e1-04a2727b45c1"
+        }
+      ],
+      "x": 1537,
+      "y": 436,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "${tempVars.reacted.id}",
+        "Lonely"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "conf-lonely",
+      "guid": "89532252-e776-4faf-bc8e-da0afce5ecee",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "326bca59-6e6c-4f5e-a78c-c5e3406cdb74"
+        }
+      ],
+      "x": 1695,
+      "y": 444,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Thank you, <@${tempVars.reacted.id}>! You now have the **Lonely** role!",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "warn-reason",
+      "guid": "8f0bbfb0-6ba9-4efb-a97a-f5d8536962b2",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "warn-reason",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "bf42db2e-7a08-4d65-8c1f-a89ce4c11d0e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "77cf3439-4db9-4920-9955-95e9b7ae70cc"
+        }
+      ],
+      "x": 476,
+      "y": 1440,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "warn-reason",
+        "Number",
+        "temp",
+        "3"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
       ]
     }
   ]

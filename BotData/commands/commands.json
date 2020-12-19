@@ -43,18 +43,28 @@
       "name": "set-status",
       "actions": [
         {
-          "name": "new-status",
+          "name": "store-status",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "status",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "bot-act",
           "category": "Bot Action",
-          "type": "More Status",
-          "statusoption": "WATCHING",
-          "statustext": "you >:("
+          "type": "Set Bot Activity",
+          "activityname": "${tempVars.status}",
+          "activitytype": "PLAYING",
+          "streamurl": ""
         },
         {
           "name": "dones",
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "done ;/",
+          "messagetext": "Done! Check my status ;)",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -193,9 +203,18 @@
           "name": "get-mtnd-warn",
           "category": "Variable",
           "type": "Get Mentioned User",
-          "varname": "mentioned-user",
+          "varname": "warned-user",
           "vartype": "User",
           "savevartype": "temp"
+        },
+        {
+          "name": "warn-reason",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "warn-reason",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "3"
         },
         {
           "name": "warn-resp",
@@ -282,13 +301,89 @@
       "name": "roles",
       "actions": [
         {
-          "name": "deprecated",
+          "name": "send-roles",
           "category": "Message",
-          "type": "Send Message",
+          "type": "Send Embed",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Deprecated. Head to #choose-roles.",
-          "savetovariable": "",
+          "color": "99D6FF",
+          "title": "TheBoysBot Reaction Roles",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Click one of the reactions to get a role of your choice!",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "reaction-menu",
           "savetovariabletype": "temp"
+        },
+        {
+          "name": "listener",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "🎮": [
+              {
+                "name": "add-gamers",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reacted.id}",
+                "rolename": "Gamers"
+              },
+              {
+                "name": "confirm-gamers",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Gamers** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "🖤": [
+              {
+                "name": "add-couples",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reacted.id}",
+                "rolename": "Couples"
+              },
+              {
+                "name": "confirm-couples",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Couples** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "💔": [
+              {
+                "name": "add-lonely",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "user": "${tempVars.reacted.id}",
+                "rolename": "Lonely"
+              },
+              {
+                "name": "conf-lonely",
+                "category": "Message",
+                "type": "Send Message",
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Lonely** role!",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "message": "${tempVars.reaction.id}",
+          "duration": "999",
+          "reactionemoji": "reaction-emoji",
+          "reactionuser": "reacted-user",
+          "react": "BOOL_TRUE@@"
         }
       ]
     },
@@ -359,6 +454,10 @@
     },
     {
       "name": "setcode",
+      "perms": [
+        "madi & awex",
+        "gna"
+      ],
       "actions": [
         {
           "name": "store-code",
@@ -395,6 +494,56 @@
           "authorimageurl": "",
           "authorlink": "",
           "description": "The current game is **Among Us!**\nMost recent code: ${tempVars.code}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "admin-help",
+      "perms": [
+        "madi & awex",
+        "gna"
+      ],
+      "actions": [
+        {
+          "name": "admin-help-resp",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "?setcode",
+              "value": "Stores Game Night code in a variable; run ?game-code for the code.",
+              "inline": "true"
+            },
+            {
+              "name": "?warn",
+              "value": "Sends a warning via DM to said user and logs it in #logs (only use if someone is being violently mean, banter is **not** warnable)",
+              "inline": "true"
+            },
+            {
+              "name": "?dev-link",
+              "value": "If you are whitlelisted for the bot, the API whitelist link is available to invite this bot to your server. However, It is fully not recommended as The Misfits is hard-coded into this bot.",
+              "inline": "true"
+            },
+            {
+              "name": "?set-status",
+              "value": "Sets the bots status to what you'd want",
+              "inline": "true"
+            }
+          ],
+          "channelname": "${dbsVars.CommandAuthor.user.dmChannel}",
+          "color": "99D6FF",
+          "title": "TheBoysBot Administration Commands",
+          "url": "",
+          "authorname": "Alex Frantz",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "This command displays all of the admin commands contained in TBB.",
           "thumbnail": "",
           "image": "",
           "footer": "",
