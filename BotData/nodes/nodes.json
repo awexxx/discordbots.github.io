@@ -1364,8 +1364,6 @@
       "guid": "c566ffb7-5974-497a-9947-7c5fcc6c037d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -1385,6 +1383,167 @@
       "formdata": [
         "${dbsVars.CommandChannel.id}",
         "**Deprecated.**\nAll commands are now listed at our developer documents.\nHead to https://docs.plaguecraft.xyz/tbb#commands.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "setcode",
+      "guid": "bb23b49d-d93b-42f4-b45e-c731d7ccb2ba",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "93eb9e00-59f1-48d4-ae9e-58207863b1de"
+          ]
+        }
+      ],
+      "x": 912,
+      "y": 1431
+    },
+    {
+      "type": "response",
+      "name": "store-code",
+      "guid": "93eb9e00-59f1-48d4-ae9e-58207863b1de",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "code",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cc0bb358-1829-4292-811c-87b2de1ee091"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "bb23b49d-d93b-42f4-b45e-c731d7ccb2ba"
+        }
+      ],
+      "x": 1135,
+      "y": 1434,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "code",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "game-code",
+      "guid": "e680b70a-26dc-4084-a946-b7e6932cbd4d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "619db0c0-b014-49c7-b939-532651abcdd4"
+          ]
+        }
+      ],
+      "x": 1132,
+      "y": 1620
+    },
+    {
+      "type": "response",
+      "name": "game-code-resp",
+      "guid": "619db0c0-b014-49c7-b939-532651abcdd4",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "e680b70a-26dc-4084-a946-b7e6932cbd4d"
+        }
+      ],
+      "x": 1329,
+      "y": 1599,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "99D6FF",
+        "TheBoysBot Game Nights",
+        "",
+        "",
+        "",
+        "",
+        "The current game is **Among Us!**\nMost recent code: ${tempVars.code}",
+        "",
+        "",
+        "",
+        "false",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "stored--code",
+      "guid": "cc0bb358-1829-4292-811c-87b2de1ee091",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "93eb9e00-59f1-48d4-ae9e-58207863b1de"
+        }
+      ],
+      "x": 1379,
+      "y": 1421,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Stored in a variable.",
         "",
         "temp"
       ],

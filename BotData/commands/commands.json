@@ -356,6 +356,53 @@
           "info": "**The Misfits** server currently has $$members$$ members. It was created on $$date$$. Icon: $$icon$$"
         }
       ]
+    },
+    {
+      "name": "setcode",
+      "actions": [
+        {
+          "name": "store-code",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "code",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "stored--code",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Stored in a variable.",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "game-code",
+      "actions": [
+        {
+          "name": "game-code-resp",
+          "category": "Message",
+          "type": "Send Embed",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "99D6FF",
+          "title": "TheBoysBot Game Nights",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "The current game is **Among Us!**\nMost recent code: ${tempVars.code}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
     }
   ]
 }
