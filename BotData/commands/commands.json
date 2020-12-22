@@ -194,40 +194,6 @@
       ]
     },
     {
-      "name": "warn",
-      "perms": [
-        "madi & awex"
-      ],
-      "actions": [
-        {
-          "name": "get-mtnd-warn",
-          "category": "Variable",
-          "type": "Get Mentioned User",
-          "varname": "warned-user",
-          "vartype": "User",
-          "savevartype": "temp"
-        },
-        {
-          "name": "warn-reason",
-          "category": "Variable",
-          "type": "Store Value in Variable",
-          "varname": "warn-reason",
-          "vartype": "Number",
-          "savevartype": "temp",
-          "param": "3"
-        },
-        {
-          "name": "warn-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${tempVars.mentioned.user.dmChannel}",
-          "messagetext": "Yo! You've been warned >:)\nBe good! We're all friends, but you pushed some buttons and someone baby raged. **Be careful!**",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
-    },
-    {
       "name": "lilly",
       "actions": [
         {
@@ -298,96 +264,6 @@
       ]
     },
     {
-      "name": "roles",
-      "actions": [
-        {
-          "name": "send-roles",
-          "category": "Message",
-          "type": "Send Embed",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "color": "99D6FF",
-          "title": "TheBoysBot Reaction Roles",
-          "url": "",
-          "authorname": "",
-          "authorimageurl": "",
-          "authorlink": "",
-          "description": "Click one of the reactions to get a role of your choice!",
-          "thumbnail": "",
-          "image": "",
-          "footer": "",
-          "timestamp": "false",
-          "savetovariable": "reaction-menu",
-          "savetovariabletype": "temp"
-        },
-        {
-          "name": "listener",
-          "category": "Reaction",
-          "type": "Add Reaction Listener",
-          "reactionActions": {
-            "🎮": [
-              {
-                "name": "add-gamers",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.reacted.id}",
-                "rolename": "Gamers"
-              },
-              {
-                "name": "confirm-gamers",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Gamers** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "🖤": [
-              {
-                "name": "add-couples",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.reacted.id}",
-                "rolename": "Couples"
-              },
-              {
-                "name": "confirm-couples",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Couples** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ],
-            "💔": [
-              {
-                "name": "add-lonely",
-                "category": "User Action",
-                "type": "Add Role to User",
-                "user": "${tempVars.reacted.id}",
-                "rolename": "Lonely"
-              },
-              {
-                "name": "conf-lonely",
-                "category": "Message",
-                "type": "Send Message",
-                "channelname": "${dbsVars.CommandChannel.id}",
-                "messagetext": "Thank you, <@${tempVars.reacted.id}>! You now have the **Lonely** role!",
-                "savetovariable": "",
-                "savetovariabletype": "temp"
-              }
-            ]
-          },
-          "message": "${tempVars.reaction.id}",
-          "duration": "999",
-          "reactionemoji": "reaction-emoji",
-          "reactionuser": "reacted-user",
-          "react": "BOOL_TRUE@@"
-        }
-      ]
-    },
-    {
       "name": "nathan",
       "actions": [
         {
@@ -424,7 +300,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Hey, <@${dbsVars.CommandAuthor.id}>! Here's the link to the PC Docs page for TheBoysBot.\nhttps://docs.plaguecraft.xyz/docs/tbb",
+          "messagetext": "Hey, <@${dbsVars.CommandAuthor.id}>! Here's the link to the PC Docs page for TheBoysBot.\nhttps://docs.plaguecraft.xyz/tbb",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -516,13 +392,13 @@
           "type": "Send Embed",
           "fields": [
             {
-              "name": "?setcode",
-              "value": "Stores Game Night code in a variable; run ?game-code for the code.",
+              "name": "?gamenight-help",
+              "value": "Game Night Commands Help Embed",
               "inline": "true"
             },
             {
-              "name": "?warn",
-              "value": "Sends a warning via DM to said user and logs it in #logs (only use if someone is being violently mean, banter is **not** warnable)",
+              "name": "",
+              "value": "",
               "inline": "true"
             },
             {
@@ -550,18 +426,6 @@
           "timestamp": "false",
           "savetovariable": "",
           "savetovariabletype": "temp"
-        }
-      ]
-    },
-    {
-      "name": "pin",
-      "actions": [
-        {
-          "name": "tttttt",
-          "category": "Message",
-          "type": "Pin Mod",
-          "pinmode": "Fixed",
-          "messagetext": "testing this"
         }
       ]
     },
@@ -601,7 +465,7 @@
           "authorname": "",
           "authorimageurl": "",
           "authorlink": "",
-          "description": "This command stores a game code from games like **Among Us** into a Javascript variable and shows when you run a certain command.",
+          "description": "This command displays how to use Game Night functionality.",
           "thumbnail": "",
           "image": "",
           "footer": "",
@@ -643,6 +507,146 @@
           "type": "Send Message",
           "channelname": "${dbsVars.CommandChannel.id}",
           "messagetext": "Game set!\n**Current game: ${tempVars.setGame}**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "kast",
+      "actions": [
+        {
+          "name": "kast-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Current Kast.gg group link:\n${tempVars.kastLink}",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "setkast",
+      "actions": [
+        {
+          "name": "kast-link",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "varname": "kastLink",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "0"
+        },
+        {
+          "name": "set-kast",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "**Link set!**",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "christmas",
+      "perms": [],
+      "actions": [
+        {
+          "name": "christmas-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "IT'S FUCKING CHRISTMAS!!! WOOOOOOOOO!!!!!!!!!!!!!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "set-bot-avatar",
+          "category": "Bot Action",
+          "type": "Set Avatar",
+          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbzZAP-anJSIQRa1XvKIfDZMmtkL3sTEgAaw&usqp=CAU"
+        },
+        {
+          "name": "set-christmas-status",
+          "category": "Bot Action",
+          "type": "Set Bot Status",
+          "presencestatus": "online"
+        },
+        {
+          "name": "set-christmas-activity",
+          "category": "Bot Action",
+          "type": "Set Bot Activity",
+          "activityname": "with my new toys! Merry Christmas!!",
+          "activitytype": "PLAYING",
+          "streamurl": ""
+        },
+        {
+          "name": "christmas-finish",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Christmas Mode: Activated",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "christmas-help",
+      "perms": [],
+      "actions": [
+        {
+          "name": "cms-help-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Merry Christmas!\nCheck the PlagueCraft Developer Documents (https://docs.plaguecraft.xyz/tbb#christmas) to access all the Christmas commands!\nGet the Christmas role first, though!",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "playlist",
+      "perms": [],
+      "actions": [
+        {
+          "name": "plist-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Yoyo! We created a special playlist for all of you!\nClick here: https://open.spotify.com/playlist/6twNxNL5d4D0UXjPP7hHLi?si=qM6T7pQ2TjKnS1VwUj4Vzg",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "pin",
+      "actions": [
+        {
+          "name": "pin-msg",
+          "category": "Message",
+          "type": "Pin Mod",
+          "pinmode": "Fixed",
+          "messagetext": "pog"
+        }
+      ]
+    },
+    {
+      "name": "secret-santa",
+      "perms": [
+        "christmas!"
+      ],
+      "actions": [
+        {
+          "name": "ss-resp",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "messagetext": "Hey there <@${dbsVars.CommandAuthor.id}>, If you didn't get a response from the Secret Santa bot, DM an admin. You may have had the bot blocked from sending messages and we missed you!\n\nFor everyone else: You have until **December 31st, 2020** to do what you'd like!",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }

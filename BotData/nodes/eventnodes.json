@@ -111,13 +111,13 @@
           "id": "0101bc23-2003-4f05-ab69-bc9ecb4f067e"
         }
       ],
-      "x": 282,
-      "y": 627,
+      "x": 101,
+      "y": 724,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "general",
-        "I've been updated and re-initialized!\n*Developers: If I'm slower then usual, hit up awex. He probably did something wrong.*",
+        "Is crimis!\nMerry Christmas! I've just come online, so use all my Christmas commands!!!!!!\n?christmas-help",
         "",
         "temp"
       ],
@@ -152,7 +152,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "bans",
-        "Damn..\nUser ${tempVars.kickuser.displayName} was kicked from the server.",
+        "Damn..\nUser ${tempVars.kickuser.displayName} was removed from the server.\nRest in peace, lol",
         "",
         "temp"
       ],
@@ -180,7 +180,7 @@
           "id": "77ebbc23-2003-4f05-ab69-bc9ecb4f067e"
         }
       ],
-      "x": 302,
+      "x": 303,
       "y": 373,
       "rtype": "Message",
       "rsubtype": "Send Message"
@@ -226,8 +226,6 @@
       "guid": "21452cc4-7ffa-4e98-b655-38bcb923df4d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -240,13 +238,13 @@
           "id": "a0687698-00fa-4bee-a38e-e533021e1509"
         }
       ],
-      "x": 515,
-      "y": 635,
+      "x": 100,
+      "y": 832,
       "rtype": "Message",
       "rsubtype": "Send Message",
       "formdata": [
         "general",
-        "https://tenor.com/FHCd.gif",
+        "https://tenor.com/beGNY.gif",
         "",
         "temp"
       ],

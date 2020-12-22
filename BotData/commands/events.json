@@ -35,7 +35,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "bans",
-          "messagetext": "Damn..\nUser ${tempVars.kickuser.displayName} was kicked from the server.",
+          "messagetext": "Damn..\nUser ${tempVars.kickuser.displayName} was removed from the server.\nRest in peace, lol",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
@@ -61,7 +61,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "general",
-          "messagetext": "I've been updated and re-initialized!\n*Developers: If I'm slower then usual, hit up awex. He probably did something wrong.*",
+          "messagetext": "Is crimis!\nMerry Christmas! I've just come online, so use all my Christmas commands!!!!!!\n?christmas-help",
           "savetovariable": "",
           "savetovariabletype": "temp"
         },
@@ -70,7 +70,7 @@
           "category": "Message",
           "type": "Send Message",
           "channelname": "general",
-          "messagetext": "https://tenor.com/FHCd.gif",
+          "messagetext": "https://tenor.com/beGNY.gif",
           "savetovariable": "",
           "savetovariabletype": "temp"
         }
