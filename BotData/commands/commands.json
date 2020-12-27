@@ -552,76 +552,17 @@
     {
       "name": "christmas",
       "perms": [],
-      "actions": [
-        {
-          "name": "christmas-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "IT'S FUCKING CHRISTMAS!!! WOOOOOOOOO!!!!!!!!!!!!!",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        },
-        {
-          "name": "set-bot-avatar",
-          "category": "Bot Action",
-          "type": "Set Avatar",
-          "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbzZAP-anJSIQRa1XvKIfDZMmtkL3sTEgAaw&usqp=CAU"
-        },
-        {
-          "name": "set-christmas-status",
-          "category": "Bot Action",
-          "type": "Set Bot Status",
-          "presencestatus": "online"
-        },
-        {
-          "name": "set-christmas-activity",
-          "category": "Bot Action",
-          "type": "Set Bot Activity",
-          "activityname": "with my new toys! Merry Christmas!!",
-          "activitytype": "PLAYING",
-          "streamurl": ""
-        },
-        {
-          "name": "christmas-finish",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Christmas Mode: Activated",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
+      "actions": []
     },
     {
       "name": "christmas-help",
       "perms": [],
-      "actions": [
-        {
-          "name": "cms-help-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Merry Christmas!\nCheck the PlagueCraft Developer Documents (https://docs.plaguecraft.xyz/tbb#christmas) to access all the Christmas commands!\nGet the Christmas role first, though!",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
+      "actions": []
     },
     {
       "name": "playlist",
       "perms": [],
-      "actions": [
-        {
-          "name": "plist-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Yoyo! We created a special playlist for all of you!\nClick here: https://open.spotify.com/playlist/6twNxNL5d4D0UXjPP7hHLi?si=qM6T7pQ2TjKnS1VwUj4Vzg",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
+      "actions": []
     },
     {
       "name": "pin",
@@ -640,17 +581,7 @@
       "perms": [
         "christmas!"
       ],
-      "actions": [
-        {
-          "name": "ss-resp",
-          "category": "Message",
-          "type": "Send Message",
-          "channelname": "${dbsVars.CommandChannel.id}",
-          "messagetext": "Hey there <@${dbsVars.CommandAuthor.id}>, If you didn't get a response from the Secret Santa bot, DM an admin. You may have had the bot blocked from sending messages and we missed you!\n\nFor everyone else: You have until **December 31st, 2020** to do what you'd like!",
-          "savetovariable": "",
-          "savetovariabletype": "temp"
-        }
-      ]
+      "actions": []
     }
   ]
 }

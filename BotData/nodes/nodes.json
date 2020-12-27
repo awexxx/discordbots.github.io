@@ -1930,9 +1930,7 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": [
-            "064dc66f-01b9-42e4-add0-a08965eb31b6"
-          ]
+          "connections": []
         }
       ],
       "x": 167,
@@ -2115,9 +2113,7 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": [
-            "9bef4371-6c24-4e71-ba31-87827b8e6d9f"
-          ]
+          "connections": []
         }
       ],
       "x": 1063,
@@ -2166,9 +2162,7 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": [
-            "bb34dd37-17bc-4835-90c3-6b05edd82a5c"
-          ]
+          "connections": []
         }
       ],
       "x": 157,
@@ -2263,9 +2257,7 @@
       "outputs": [
         {
           "label": "responses",
-          "connections": [
-            "8f594f7d-dbf0-4d66-b986-d3bd907e142c"
-          ]
+          "connections": []
         }
       ],
       "x": 609,

@@ -97,6 +97,8 @@
       "guid": "a0687698-00fa-4bee-a38e-e533021e1509",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -117,7 +119,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "general",
-        "Is crimis!\nMerry Christmas! I've just come online, so use all my Christmas commands!!!!!!\n?christmas-help",
+        "Crimis is sadly over ;(\nYa boi is online though, so feel free to offer me chicken nugs or just use my commands.. pwease!!\n?help",
         "",
         "temp"
       ],
@@ -226,6 +228,8 @@
       "guid": "21452cc4-7ffa-4e98-b655-38bcb923df4d",
       "reactionFields": [],
       "embedfields": [],
+      "saveToVariable": "",
+      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
@@ -244,7 +248,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "general",
-        "https://tenor.com/beGNY.gif",
+        "https://tenor.com/bh8YI.gif",
         "",
         "temp"
       ],
