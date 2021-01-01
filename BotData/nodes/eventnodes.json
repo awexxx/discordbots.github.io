@@ -119,7 +119,7 @@
       "rsubtype": "Send Message",
       "formdata": [
         "general",
-        "Crimis is sadly over ;(\nYa boi is online though, so feel free to offer me chicken nugs or just use my commands.. pwease!!\n?help",
+        "SUP FUCKERS\nI have arrived. Bow to me mortals.",
         "",
         "temp"
       ],
@@ -228,8 +228,6 @@
       "guid": "21452cc4-7ffa-4e98-b655-38bcb923df4d",
       "reactionFields": [],
       "embedfields": [],
-      "saveToVariable": "",
-      "saveToVariableType": "temp",
       "outputs": [
         {
           "label": "next response",
